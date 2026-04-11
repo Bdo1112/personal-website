@@ -1,0 +1,38 @@
+---
+import Layout from '../../components/Layout.astro';
+import { getCollection, render } from 'astro:content';
+
+export async function getStaticPaths() {
+  const writing = await getCollection('writing');
+  return writing.map(w => ({
+    params: { slug: w.id },
+    props: { post: w },
+  }));
+}
+
+const { post } = Astro.props;
+const { Content } = await render(post);
+
+const formatted = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric',
+}).format(post.data.date);
+---
+
+<Layout title={post.data.title}>
+  <div class="mb-8">
+    <h1 class="text-xl font-semibold text-gray-900">{post.data.title}</h1>
+    <time class="mt-1 block text-xs text-gray-400">{formatted}</time>
+  </div>
+
+  <div class="prose prose-sm prose-gray max-w-none">
+    <Content />
+  </div>
+
+  <div class="mt-12 pt-6 border-t border-gray-100">
+    <a href="/writing" class="text-xs text-gray-400 hover:text-gray-900 transition-colors">
+      ← All writing
+    </a>
+  </div>
+</Layout>

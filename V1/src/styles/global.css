@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+/*
+  Typography: change --font-body to swap the site font.
+  To use a web font, add a <link> in Layout.astro and update this variable.
+  Example: --font-body: 'Inter', sans-serif;
+*/
+:root {
+  --font-body: ui-sans-serif, system-ui, -apple-system, sans-serif;
+}
+
+body {
+  font-family: var(--font-body);
+}
+
+/*
+  Dark mode: when ready, add a [data-theme="dark"] block here and flip colors.
+  Tailwind's dark: variant classes will also work once darkMode is configured.
+*/

@@ -1,0 +1,22 @@
+---
+import Layout from '../../components/Layout.astro';
+import ProjectPreview from '../../components/ProjectPreview.astro';
+import { getCollection } from 'astro:content';
+
+const projects = await getCollection('projects');
+---
+
+<Layout title="Projects">
+  <h1 class="text-xl font-semibold text-gray-900">Projects</h1>
+  <p class="text-xs text-gray-400 mb-4">Found {projects.length} projects</p>
+  <div class="mt-8">
+    {projects.map(p => (
+      <ProjectPreview
+        slug={p.id}
+        title={p.data.title}
+        summary={p.data.summary}
+        stack={p.data.stack}
+      />
+    ))}
+  </div>
+</Layout>

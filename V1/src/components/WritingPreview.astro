@@ -1,0 +1,28 @@
+---
+interface Props {
+  slug: string;
+  title: string;
+  date: Date;
+  summary: string;
+}
+
+const { slug, title, date, summary } = Astro.props;
+
+const formatted = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+}).format(date);
+---
+
+<article class="py-5 border-b border-gray-100 last:border-0">
+  <div class="flex items-baseline justify-between gap-4">
+    <a href={`/writing/${slug}`} class="group">
+      <h2 class="text-base font-medium text-gray-900 group-hover:text-gray-500 transition-colors">
+        {title}
+      </h2>
+    </a>
+    <time class="text-xs text-gray-400 shrink-0">{formatted}</time>
+  </div>
+  <p class="mt-1 text-sm text-gray-500 leading-relaxed">{summary}</p>
+</article>

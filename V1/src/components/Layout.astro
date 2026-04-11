@@ -1,0 +1,26 @@
+---
+import Navbar from './Navbar.astro';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+}
+
+const { title = 'Brian Oh' } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{title === 'Brian Oh' ? title : `${title} — Brian Oh`}</title>
+  </head>
+  <body class="bg-white text-gray-900 antialiased">
+    <Navbar />
+    <main class="max-w-2xl mx-auto px-6 py-12">
+      <slot />
+    </main>
+  </body>
+</html>

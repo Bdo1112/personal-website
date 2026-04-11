@@ -1,0 +1,22 @@
+---
+import Layout from '../../components/Layout.astro';
+import WritingPreview from '../../components/WritingPreview.astro';
+import { getCollection } from 'astro:content';
+
+const writing = await getCollection('writing');
+const sorted = writing.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Layout title="Writing">
+  <h1 class="text-xl font-semibold text-gray-900">Writing</h1>
+  <div class="mt-8">
+    {sorted.map(w => (
+      <WritingPreview
+        slug={w.id}
+        title={w.data.title}
+        date={w.data.date}
+        summary={w.data.summary}
+      />
+    ))}
+  </div>
+</Layout>

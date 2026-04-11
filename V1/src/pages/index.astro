@@ -1,0 +1,59 @@
+---
+import Layout from '../components/Layout.astro';
+import ProjectPreview from '../components/ProjectPreview.astro';
+import WritingPreview from '../components/WritingPreview.astro';
+import { getCollection } from 'astro:content';
+
+const allProjects = await getCollection('projects');
+const allWriting = await getCollection('writing');
+
+const featuredProjects = allProjects.filter(p => p.data.featured);
+const recentWriting = allWriting
+  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+  .slice(0, 3);
+---
+
+<Layout>
+  <section>
+    <h1 class="text-xl font-semibold text-gray-900">Brian Oh</h1>
+    <p class="mt-2 text-sm text-gray-500 leading-relaxed max-w-prose">
+      <!-- Replace with your intro -->
+      Software Engineer currently focusing on building backend platform infrastructure - distributed system, federated GraphQL, and AI developer tooling.
+      Interested in scalability, maintainability, and how AI tooling is chaning the way we solve problems.
+    </p>
+  </section>
+
+  {featuredProjects.length > 0 && (
+    <section class="mt-12">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Projects</h2>
+      {featuredProjects.map(p => (
+        <ProjectPreview
+          slug={p.id}
+          title={p.data.title}
+          summary={p.data.summary}
+          stack={p.data.stack}
+        />
+      ))}
+      <a href="/projects" class="inline-block mt-3 text-xs text-gray-400 hover:text-gray-900 transition-colors">
+        All projects →
+      </a>
+    </section>
+  )}
+
+  {recentWriting.length > 0 && (
+    <section class="mt-12">
+      <h2 class="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-1">Writing</h2>
+      {recentWriting.map(w => (
+        <WritingPreview
+          slug={w.id}
+          title={w.data.title}
+          date={w.data.date}
+          summary={w.data.summary}
+        />
+      ))}
+      <a href="/writing" class="inline-block mt-3 text-xs text-gray-400 hover:text-gray-900 transition-colors">
+        All writing →
+      </a>
+    </section>
+  )}
+</Layout>
