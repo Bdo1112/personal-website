@@ -13,8 +13,8 @@ There was no easy way to verify schema changes would not introduce production fa
 ## High Level
 Distributed validation platform that evaluates real production GraphQL operations against proposed schema changes to prevent breaking changes before deployment.
 
-![Query validation flow](/src/assets/projects/p1/query-validation.png) 
-
+![Query-validation-flow](../../assets/projects/p1/query-validation.png)
+ 
 - Composes a new supergraph from incoming schema changes
 - Loads production operation data set
 - Executes distributed query planning across multiple planners
