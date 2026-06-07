@@ -1,6 +1,6 @@
 ---
 title: "How a Browser Request Reaches a Backend Service"
-date: 2026-06-06
+date: 2026-05-06
 summary: "Notes on what happens from entering a URL in a browser to receiving a backend response."
 ---
 
