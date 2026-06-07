@@ -17,6 +17,7 @@ const formatted = new Intl.DateTimeFormat('en-US', {
   year: 'numeric',
   month: 'long',
   day: 'numeric',
+  timeZone: 'UTC',
 }).format(post.data.date);
 ---
 

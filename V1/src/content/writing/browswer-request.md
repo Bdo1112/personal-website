@@ -26,14 +26,9 @@ URL: https://api.example.com/users/123
 ```
 DNS resolves only domain
 ```
-domain: api.example.com 
-->
-IP: 123.250.11.22
+domain: api.example.com -> IP: 123.250.11.22
 ```
-and ignores
-```
-/user/123
-```
+and ignores `/user/123`
 
 
 # IP and PORT
@@ -44,10 +39,10 @@ DNS returns IP for domain which tells the browswer where to connect, and the por
 123.250.11.22:443
 ```
 
-Port
+Ports:
 ```
-443 = HTTPS
-80 = HTTP
+HTTPS = 443 
+HTTP = 80 
 ```
 After the browser knows the IP and port, it opens TCP connection. If the URL uses HTTPS, hen it performs TLS handshake to secure the connection, and then it sends HTTP request. 
 
@@ -58,10 +53,10 @@ TLS is to ecrypt the connection
 HTTP is to send actual request
 
 From HTTP:
-HTTP -> TCP -> IP
+`HTTP -> TCP -> IP`
 
 From HTTPS:
-HTTP -> TLS -> TCP -> IP
+`HTTP -> TLS -> TCP -> IP`
 
 # CDN, Load Balancer, and Gateway
 
