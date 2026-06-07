@@ -1,8 +1,7 @@
 ---
 title: "How a Browser Request Reaches a Backend Service"
-summary: "This article explains how a browser request reaches a backend service: the browser extracts the domain from a URL"
-stack: []
-featured: true
+date: 2026-06-06
+summary: "Notes on what happens from entering a URL in a browser to receiving a backend response."
 ---
 
 # How a Browser Request Reaches a Backend Service
