@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3f0e8" />
+  <title>Flavor Atlas — Design Reference</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f0e8;
+      --surface: #fffdf7;
+      --ink: #263d32;
+      --muted: #53665b;
+      --line: #dedfd1;
+      --accent: #a84836;
+      --sage: #e9eee2;
+      --serif: Georgia, "Times New Roman", serif;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font: 14px/1.5 ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    button, input { font: inherit; }
+    button { cursor: pointer; }
+    button:focus-visible, input:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 4px;
+    }
+    [hidden] { display: none !important; }
+
+    .container {
+      width: min(1160px, calc(100% - 80px));
+      margin: clamp(24px, 5vw, 66px) auto 0;
+    }
+    .explorer {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      box-shadow: 0 16px 52px #3a47350c;
+    }
+    .controls { padding: 24px 28px 19px; }
+    .explorer-heading, .filterbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .explorer-heading h1 {
+      margin: 0;
+      font: 400 clamp(28px, 3vw, 38px)/1.1 var(--serif);
+      letter-spacing: -.045em;
+    }
+    .search {
+      width: min(365px, 100%);
+      min-width: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-height: 46px;
+      padding: 8px 12px;
+      color: var(--muted);
+      background: #f8f7ef;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+    }
+    .search:focus-within { border-color: var(--ink); box-shadow: 0 0 0 2px var(--sage); }
+    .search-icon {
+      position: relative;
+      flex: 0 0 13px;
+      width: 13px;
+      height: 13px;
+      margin-right: 3px;
+      border: 1.5px solid currentColor;
+      border-radius: 50%;
+    }
+    .search-icon::after {
+      content: "";
+      position: absolute;
+      width: 6px;
+      height: 1.5px;
+      top: 9px;
+      left: 9px;
+      background: currentColor;
+      transform: rotate(45deg);
+      transform-origin: left center;
+    }
+    .search input {
+      width: 100%;
+      min-width: 0;
+      padding: 0;
+      border: 0;
+      outline: none;
+      background: transparent;
+      color: var(--ink);
+    }
+    .search input::placeholder { color: var(--muted); opacity: 1; }
+    .search kbd {
+      padding: 1px 5px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: var(--surface);
+      font: 12px ui-monospace, monospace;
+    }
+    .filterbar { margin-top: 20px; }
+    .filters { display: flex; flex-wrap: wrap; gap: 7px; }
+    .chip {
+      min-height: 34px;
+      padding: 5px 13px;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 650;
+      transition: background .15s, border-color .15s;
+    }
+    .chip:hover { background: var(--sage); }
+    .chip.active { border-color: var(--ink); background: var(--ink); color: var(--surface); }
+    .count { color: var(--muted); font-size: 12px; white-space: nowrap; }
+    .mobile-tabs { display: none; }
+
+    .workspace {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) clamp(290px, 32%, 350px);
+      border-top: 1px solid var(--line);
+    }
+    .map-area {
+      min-width: 0;
+      min-height: 474px;
+      display: flex;
+      flex-direction: column;
+      padding: 24px 28px 16px;
+      border-bottom-left-radius: 23px;
+      background: #f1f3e9;
+    }
+    .chart {
+      flex: 1;
+      display: grid;
+      grid-template-columns: max-content minmax(0, 1fr);
+      grid-template-rows: auto minmax(374px, 1fr) auto;
+      gap: 10px;
+    }
+    .map-instruction, .map-axis {
+      margin: 0;
+      color: var(--muted);
+      font-size: 11px;
+      font-weight: 650;
+    }
+    .map-instruction { grid-column: 2; text-align: right; }
+    .map-axis-y {
+      grid-column: 1;
+      grid-row: 2;
+      display: grid;
+      grid-template-rows: 1fr auto;
+      justify-items: end;
+    }
+    .map-axis-y span:first-child { align-self: start; transform: translateY(-50%); }
+    .map-axis-y span:last-child { transform: translateY(50%); }
+    .map-axis-x {
+      grid-column: 2;
+      grid-row: 3;
+      display: flex;
+      justify-content: space-between;
+    }
+    .map-axis-x span:last-child { color: var(--accent); }
+    .map {
+      grid-column: 2;
+      grid-row: 2;
+      position: relative;
+      border: 1px solid #cdd7c8;
+      border-radius: 8px;
+      background-color: #f4f6ee;
+      background-image: linear-gradient(#dfe6da 1px, transparent 1px), linear-gradient(90deg, #dfe6da 1px, transparent 1px);
+      background-size: 25% 25%;
+      background-position: -1px -1px;
+    }
+    .map-dot {
+      position: absolute;
+      z-index: 1;
+      width: 22px;
+      height: 22px;
+      padding: 0;
+      display: grid;
+      place-items: center;
+      background: none;
+      border: 0;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .map-dot::before {
+      content: "";
+      width: 13px;
+      height: 13px;
+      border: 2px solid #fffdf7;
+      border-radius: 50%;
+      background: var(--dot-color);
+      box-shadow: 0 0 0 1px #263d3255, 0 2px 4px #263d3220;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .map-dot:hover, .map-dot:focus-visible, .map-dot.active { z-index: 2; }
+    .map-dot:hover::before, .map-dot:focus-visible::before, .map-dot.active::before {
+      transform: scale(1.16);
+      box-shadow: 0 0 0 1.5px var(--ink), 0 0 0 5px #263d321a;
+    }
+    .dot-name {
+      position: absolute;
+      z-index: 1;
+      max-width: 140px;
+      padding: 3px 6px;
+      border: 1px solid transparent;
+      border-radius: 6px;
+      color: var(--muted);
+      background: #f4f6eee8;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.15;
+      white-space: nowrap;
+      pointer-events: none;
+      transform: translate(12px, -50%);
+    }
+    .dot-name.above { transform: translate(-50%, calc(-100% - 11px)); }
+    .dot-name.below { transform: translate(-50%, 12px); }
+    .dot-name.left { transform: translate(calc(-100% - 12px), -50%); }
+    .dot-name.selected, .map-dot:hover + .dot-name, .map-dot:focus-visible + .dot-name {
+      z-index: 3;
+      border-color: #ced8cb;
+      color: var(--ink);
+      background: var(--surface);
+      box-shadow: 0 2px 8px #263d3210;
+      font-weight: 700;
+    }
+    .empty { margin: auto; padding: 22px; text-align: center; color: var(--muted); }
+
+    .detail {
+      display: flex;
+      min-width: 0;
+      flex-direction: column;
+      background: #fbf8ed;
+      border-left: 1px solid var(--line);
+      border-bottom-right-radius: 23px;
+    }
+    .detail-content { padding: 26px 27px 29px; }
+    .detail-name { display: flex; align-items: flex-start; gap: 10px; }
+    .swatch { flex: 0 0 auto; width: 9px; height: 9px; border-radius: 50%; background: var(--swatch); }
+    .detail-name .swatch { margin-top: 13px; box-shadow: 0 0 0 3px #263d3212; }
+    .detail h2 {
+      margin: 0;
+      font: 400 31px/1.08 var(--serif);
+      letter-spacing: -.045em;
+    }
+    .detail p { margin: 8px 0 0; color: var(--muted); font-size: 13px; }
+    .detail-empty { display: grid; place-content: center; flex: 1; min-height: 220px; padding: 22px; text-align: center; }
+    .detail-empty h2 { font-size: 24px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 13px; }
+    .tag { padding: 3px 8px; border-radius: 16px; background: var(--sage); color: #3c604c; font-size: 11px; font-weight: 650; }
+    .tag.hot { background: #f2e2d7; color: #9c432f; }
+    .detail-section-title { margin: 22px 0 7px; font-size: 12px; font-weight: 750; }
+    .ingredients { margin: 0; }
+    .ingredient {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 6px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 13px;
+    }
+    .ingredient dd { margin: 0; color: var(--muted); text-align: right; }
+    .flavors { display: grid; gap: 7px; }
+    .flavor { display: grid; grid-template-columns: 67px 1fr 18px; gap: 8px; align-items: center; color: var(--muted); font-size: 11px; }
+    .flavor > :last-child { text-align: right; font-variant-numeric: tabular-nums; }
+    .track { height: 5px; overflow: hidden; border-radius: 5px; background: #e8e5da; }
+    .fill { height: 100%; border-radius: 5px; background: #b76551; }
+
+    .shelf { margin: 26px 0 35px; }
+    .shelf h2 { margin: 0 0 12px; font: 400 23px/1.2 var(--serif); letter-spacing: -.03em; }
+    .cards { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+    .card {
+      display: flex;
+      min-width: 0;
+      align-items: center;
+      gap: 11px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--surface);
+      text-align: left;
+      color: var(--ink);
+      transition: border-color .15s;
+    }
+    .card:hover { border-color: var(--accent); }
+    .card strong { display: block; font: 400 16px/1.2 var(--serif); }
+    .card small { display: block; margin-top: 3px; color: var(--muted); font-size: 11px; }
+    .footer { padding: 0 18px 25px; text-align: center; color: var(--muted); font-size: 11px; }
+    .footer p { margin: 0; }
+
+    @media (max-width: 1000px) {
+      .dot-name.end-of-map { transform: translate(calc(-100% - 12px), -50%); }
+      .dot-name:not(.selected) { visibility: hidden; }
+      .map-dot:hover + .dot-name, .map-dot:focus-visible + .dot-name { visibility: visible; }
+    }
+    @media (max-width: 850px) {
+      .container { width: min(650px, calc(100% - 32px)); }
+      .controls { padding: 19px 18px 14px; }
+      .filterbar { margin-top: 15px; }
+      .workspace { display: block; }
+      .map-area { min-height: 0; padding: 17px 18px 15px; border-radius: 0 0 23px 23px; }
+      .chart { grid-template-rows: auto minmax(330px, 1fr) auto; }
+      .detail { border-left: 0; border-radius: 0 0 23px 23px; }
+      .detail-content { padding: 21px 18px 24px; }
+      .mobile-tabs { display: flex; gap: 19px; padding: 0 18px; border-top: 1px solid var(--line); }
+      .mobile-tabs button {
+        min-height: 42px;
+        padding: 8px 0 6px;
+        background: transparent;
+        border: 0;
+        border-bottom: 2px solid transparent;
+        color: var(--muted);
+        font-weight: 650;
+        font-size: 12px;
+      }
+      .mobile-tabs button.active { border-bottom-color: var(--accent); color: var(--ink); }
+      .workspace.map-only .detail, .workspace.detail-only .map-area { display: none; }
+      .cards { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 540px) {
+      .container { width: calc(100% - 24px); margin-top: 14px; }
+      .explorer-heading { flex-direction: column; align-items: stretch; gap: 12px; }
+      .search { width: 100%; }
+      .search input { font-size: 16px; }
+      .search kbd { display: none; }
+      .filterbar { align-items: end; gap: 7px; }
+      .filters { gap: 5px; }
+      .chip { min-height: 32px; padding: 4px 9px; font-size: 11px; }
+      .chart { grid-template-rows: auto minmax(289px, 1fr) auto; column-gap: 7px; }
+      .dot-name.above, .dot-name.below { transform: translate(12px, -50%); }
+      .map-area { min-height: 180px; }
+      .shelf { margin-top: 21px; }
+      .card { padding: 11px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <section id="explore" class="explorer" aria-labelledby="atlas-title">
+      <div class="controls">
+        <div class="explorer-heading">
+          <h1 id="atlas-title">Flavor Atlas</h1>
+          <label class="search">
+            <span class="search-icon" aria-hidden="true"></span>
+            <input id="search" type="search" autocomplete="off" placeholder="Search sauces or ingredients" aria-label="Search sauces or ingredients" aria-keyshortcuts="/" />
+            <kbd aria-hidden="true">/</kbd>
+          </label>
+        </div>
+        <div class="filterbar">
+          <div class="filters" role="group" aria-label="Filter by flavor">
+            <button class="chip active" type="button" data-filter="all" aria-pressed="true">All sauces</button>
+            <button class="chip" type="button" data-filter="spicy" aria-pressed="false">Spicy</button>
+            <button class="chip" type="button" data-filter="nutty" aria-pressed="false">Nutty</button>
+            <button class="chip" type="button" data-filter="garlicky" aria-pressed="false">Garlicky</button>
+            <button class="chip" type="button" data-filter="tangy" aria-pressed="false">Tangy</button>
+            <button class="chip" type="button" data-filter="fresh" aria-pressed="false">Fresh</button>
+          </div>
+          <span class="count" id="count" role="status"></span>
+        </div>
+      </div>
+
+      <div class="mobile-tabs" role="group" aria-label="View">
+        <button type="button" data-view="map" class="active" aria-controls="map-area" aria-pressed="true">Flavor map</button>
+        <button type="button" data-view="detail" aria-controls="detail" aria-pressed="false">Recipe details</button>
+      </div>
+
+      <div class="workspace map-only" id="workspace">
+        <section class="map-area" id="map-area" aria-label="Flavor map">
+          <div class="chart" id="chart">
+            <p class="map-instruction">Select a sauce</p>
+            <div class="map-axis map-axis-y" aria-hidden="true"><span>Rich</span><span>Light</span></div>
+            <div id="map" class="map" role="group" aria-label="Sauce recipes by heat and richness" aria-describedby="map-axis-description"></div>
+            <div class="map-axis map-axis-x" aria-hidden="true"><span>Mild</span><span>Spicy</span></div>
+            <span id="map-axis-description" hidden>Heat increases from mild on the left to spicy on the right. Richness increases from light at the bottom to rich at the top.</span>
+          </div>
+          <p class="empty" id="empty" hidden>No sauces match. Try a different search or filter.</p>
+        </section>
+        <aside class="detail" id="detail" aria-live="polite" aria-label="Selected sauce details"></aside>
+      </div>
+    </section>
+
+    <section class="shelf" id="recipe-shelf" aria-labelledby="shelf-title">
+      <h2 id="shelf-title">Try a sauce</h2>
+      <div id="cards" class="cards"></div>
+    </section>
+  </main>
+  <footer class="footer" id="about">
+    <p>Hot pot dipping sauces · Design reference with sample recipes and estimated flavor scores</p>
+  </footer>
+  <script>
+    // Sample visual-design data only. Replace with verified src/data/hotpotsauce/*.json in production.
+    const recipes = [
+      {id:'sesame-garlic',name:'Sesame Garlic',description:'Creamy sesame with a savory garlic lift.',spicy:1,rich:8,umami:7,tangy:1,fresh:2,tags:['nutty','garlicky'],color:'#dcae65',ingredients:[['Sesame paste','2 tbsp'],['Minced garlic','1 tsp'],['Light soy sauce','1 tsp'],['Water','1 tbsp']]},
+      {id:'chili-garlic',name:'Chili Garlic',description:'A bright, bold sauce with chili oil and fresh garlic.',spicy:8,rich:4,umami:5,tangy:3,fresh:3,tags:['spicy','garlicky'],color:'#df6240',ingredients:[['Chili oil','1 tbsp'],['Minced garlic','2 tsp'],['Light soy sauce','1 tsp'],['Rice vinegar','1 tsp']]},
+      {id:'citrus-ponzu',name:'Citrus Ponzu',description:'Light, clean and tangy with citrus notes.',spicy:1,rich:1,umami:4,tangy:9,fresh:9,tags:['tangy','fresh'],color:'#b9c856',ingredients:[['Ponzu','2 tbsp'],['Scallion','1 tsp'],['Grated daikon','1 tbsp']]},
+      {id:'mala-sesame',name:'Mala Sesame',description:'A creamy sesame base with a spicy, numbing finish.',spicy:9,rich:9,umami:8,tangy:1,fresh:1,tags:['spicy','nutty'],color:'#b9432c',ingredients:[['Sesame paste','2 tbsp'],['Chili oil','2 tsp'],['Sichuan pepper oil','¼ tsp'],['Light soy sauce','1 tsp']]},
+      {id:'scallion-ginger',name:'Scallion Ginger',description:'Fresh, aromatic and gently savory.',spicy:1,rich:2,umami:4,tangy:2,fresh:9,tags:['fresh'],color:'#78a369',ingredients:[['Scallion','1 tbsp'],['Ginger','1 tsp'],['Sesame oil','1 tsp'],['Light soy sauce','1 tsp']]},
+      {id:'peanut-satay',name:'Peanut Satay',description:'Comforting peanut richness with warm aromatics.',spicy:3,rich:9,umami:7,tangy:2,fresh:1,tags:['nutty'],color:'#c69051',ingredients:[['Peanut butter','1 tbsp'],['Light soy sauce','1 tsp'],['Water','1 tbsp'],['Chili oil','½ tsp']]},
+      {id:'black-vinegar',name:'Black Vinegar Garlic',description:'Tangy and sharp, with a punch of garlic.',spicy:3,rich:2,umami:5,tangy:9,fresh:6,tags:['tangy','garlicky'],color:'#99765a',ingredients:[['Black vinegar','1 tbsp'],['Light soy sauce','1 tbsp'],['Minced garlic','1 tsp']]},
+      {id:'herb-yuzu',name:'Herb Yuzu',description:'Citrusy, herbal and refreshing.',spicy:2,rich:1,umami:2,tangy:8,fresh:10,tags:['fresh','tangy'],color:'#8db673',ingredients:[['Yuzu juice','1 tsp'],['Light soy sauce','1 tbsp'],['Cilantro','1 tbsp'],['Water','1 tsp']]},
+      {id:'roasted-sesame',name:'Roasted Sesame Soy',description:'Toasty sesame depth with a soy-sauce backbone.',spicy:2,rich:9,umami:9,tangy:1,fresh:2,tags:['nutty'],color:'#b47840',ingredients:[['Sesame paste','1 tbsp'],['Toasted sesame oil','1 tsp'],['Light soy sauce','1 tbsp'],['Water','1 tbsp']]},
+      {id:'green-chili',name:'Green Chili Lime',description:'Sharp, fresh and lively with a spicy finish.',spicy:7,rich:2,umami:2,tangy:8,fresh:8,tags:['spicy','fresh','tangy'],color:'#739f4b',ingredients:[['Green chili','1 tsp'],['Lime juice','1 tsp'],['Light soy sauce','1 tbsp'],['Cilantro','1 tbsp']]},
+      {id:'mushroom-umami',name:'Mushroom Umami',description:'Mellow and deeply savory.',spicy:2,rich:7,umami:10,tangy:1,fresh:2,tags:[],color:'#9a754f',ingredients:[['Mushroom sauce','1 tbsp'],['Light soy sauce','1 tsp'],['Sesame oil','½ tsp']]},
+      {id:'spicy-tomato',name:'Spicy Tomato',description:'Fruity acidity with warm chili heat.',spicy:7,rich:3,umami:5,tangy:7,fresh:5,tags:['spicy','tangy'],color:'#dd7854',ingredients:[['Tomato sauce','1 tbsp'],['Chili oil','1 tsp'],['Rice vinegar','½ tsp'],['Light soy sauce','1 tsp']]}
+    ];
+    const tagsLabel = { nutty: 'Nutty', spicy: 'Spicy', garlicky: 'Garlicky', fresh: 'Fresh', tangy: 'Tangy' };
+    const labelPlacement = {
+      'roasted-sesame': 'above',
+      'mala-sesame': 'left',
+      'scallion-ginger': 'above',
+      'citrus-ponzu': 'below',
+      'chili-garlic': 'left',
+    };
+
+    const explorer = document.getElementById('explore');
+    const map = document.getElementById('map');
+    const detail = document.getElementById('detail');
+    const cards = document.getElementById('cards');
+    const workspace = document.getElementById('workspace');
+    const search = document.getElementById('search');
+    const count = document.getElementById('count');
+    const empty = document.getElementById('empty');
+    const chart = document.getElementById('chart');
+    const viewButtons = document.querySelectorAll('[data-view]');
+    const filterButtons = document.querySelectorAll('[data-filter]');
+    const mobile = window.matchMedia('(max-width: 850px)');
+
+    let selected = 'sesame-garlic';
+    let filter = 'all';
+    let query = '';
+
+    const escapeHtml = value => String(value).replace(/[&<>"']/g, char =>
+      ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char])
+    );
+
+    function visibleRecipes() {
+      return recipes.filter(recipe =>
+        (filter === 'all' || recipe.tags.includes(filter)) &&
+        [recipe.name, recipe.description, ...recipe.ingredients.map(([name]) => name), ...recipe.tags]
+          .join(' ').toLowerCase().includes(query)
+      );
+    }
+
+    function setActive(button, active) {
+      button.classList.toggle('active', active);
+      button.setAttribute('aria-pressed', String(active));
+    }
+
+    function setView(view) {
+      workspace.classList.toggle('map-only', view === 'map');
+      workspace.classList.toggle('detail-only', view === 'detail');
+      viewButtons.forEach(button => setActive(button, button.dataset.view === view));
+    }
+
+    function updateMapSelection() {
+      map.querySelectorAll('.map-dot').forEach(button => {
+        const active = button.dataset.recipe === selected;
+        setActive(button, active);
+        button.nextElementSibling.classList.toggle('selected', active);
+      });
+    }
+
+    function selectRecipe(id, { toggle = false } = {}) {
+      selected = toggle && selected === id ? null : id;
+      updateMapSelection();
+      renderDetail();
+
+      if (selected && mobile.matches) {
+        setView('detail');
+        detail.querySelector('h2').focus({ preventScroll: true });
+        detail.scrollIntoView({ block: 'nearest' });
+      }
+    }
+
+    function renderMap() {
+      map.querySelectorAll('.map-dot, .dot-name').forEach(element => element.remove());
+      const shown = visibleRecipes();
+      count.textContent = shown.length + (shown.length === 1 ? ' recipe' : ' recipes');
+      empty.hidden = shown.length > 0;
+      chart.hidden = shown.length === 0;
+
+      shown.forEach(recipe => {
+        const x = (5 + recipe.spicy * 9) + '%';
+        const y = (95 - recipe.rich * 9) + '%';
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'map-dot';
+        button.dataset.recipe = recipe.id;
+        button.style.left = x;
+        button.style.top = y;
+        button.style.setProperty('--dot-color', recipe.color);
+        button.setAttribute('aria-label', recipe.name + ', heat ' + recipe.spicy + ' of 10, richness ' + recipe.rich + ' of 10');
+        button.addEventListener('click', () => selectRecipe(recipe.id, { toggle: !mobile.matches }));
+
+        const label = document.createElement('span');
+        label.className = 'dot-name';
+        label.setAttribute('aria-hidden', 'true');
+        label.style.left = x;
+        label.style.top = y;
+        label.textContent = recipe.name;
+        if (labelPlacement[recipe.id]) label.classList.add(labelPlacement[recipe.id]);
+        if (recipe.spicy >= 7) label.classList.add('end-of-map');
+        map.append(button, label);
+      });
+      updateMapSelection();
+    }
+
+    function renderDetail() {
+      const recipe = recipes.find(item => item.id === selected);
+
+      if (!recipe) {
+        detail.innerHTML = '<div class="detail-empty"><h2>Choose a sauce</h2><p>Select a point on the map to see the recipe.</p></div>';
+        return;
+      }
+
+      const tags = recipe.tags.length
+        ? recipe.tags.map(tag => '<span class="tag ' + (tag === 'spicy' ? 'hot' : '') + '">' + tagsLabel[tag] + '</span>').join('')
+        : '<span class="tag">Savory</span>';
+      const ingredients = recipe.ingredients.map(([name, amount]) =>
+        '<div class="ingredient"><dt>' + escapeHtml(name) + '</dt><dd>' + escapeHtml(amount) + '</dd></div>'
+      ).join('');
+      const flavors = [
+        ['Heat', recipe.spicy], ['Richness', recipe.rich], ['Umami', recipe.umami],
+        ['Tanginess', recipe.tangy], ['Freshness', recipe.fresh],
+      ].map(([name, value]) =>
+        '<div class="flavor"><span>' + name + '</span><div class="track" aria-hidden="true"><div class="fill" style="width:' +
+        value * 10 + '%"></div></div><span aria-label="' + value + ' out of 10">' + value + '</span></div>'
+      ).join('');
+
+      detail.innerHTML = [
+        '<div class="detail-content">',
+        '<div class="detail-name"><span class="swatch" style="--swatch:' + recipe.color + '" aria-hidden="true"></span>',
+        '<h2 tabindex="-1">' + escapeHtml(recipe.name) + '</h2></div>',
+        '<p>' + escapeHtml(recipe.description) + '</p><div class="tags">' + tags + '</div>',
+        '<h3 class="detail-section-title">Ingredients</h3><dl class="ingredients">' + ingredients + '</dl>',
+        '<h3 class="detail-section-title">Flavor profile</h3><div class="flavors">' + flavors + '</div>',
+        '</div>',
+      ].join('');
+    }
+
+    function renderCards() {
+      recipes.slice(0, 4).forEach(recipe => {
+        const card = document.createElement('button');
+        card.type = 'button';
+        card.className = 'card';
+        card.innerHTML = [
+          '<span class="swatch" style="--swatch:' + recipe.color + '" aria-hidden="true"></span>',
+          '<span><strong>' + escapeHtml(recipe.name) + '</strong>',
+          '<small>' + (recipe.tags.map(tag => tagsLabel[tag]).join(' · ') || 'Savory') + '</small></span>',
+        ].join('');
+        card.addEventListener('click', () => {
+          selectRecipe(recipe.id);
+          if (!mobile.matches) {
+            explorer.scrollIntoView({ block: 'start' });
+            detail.querySelector('h2').focus({ preventScroll: true });
+          }
+        });
+        cards.append(card);
+      });
+    }
+
+    filterButtons.forEach(button => button.addEventListener('click', () => {
+      const flavor = button.dataset.filter;
+      filter = filter === flavor ? 'all' : flavor;
+      filterButtons.forEach(item => setActive(item, item.dataset.filter === filter));
+      renderMap();
+      if (mobile.matches) setView('map');
+    }));
+
+    search.addEventListener('input', () => {
+      query = search.value.trim().toLowerCase();
+      renderMap();
+      if (mobile.matches) setView('map');
+    });
+
+    document.addEventListener('keydown', event => {
+      const target = document.activeElement;
+      if (event.key === '/' && !event.ctrlKey && !event.metaKey && !event.altKey &&
+        !target.matches('input, textarea, select') && !target.isContentEditable) {
+        event.preventDefault();
+        search.focus();
+      }
+    });
+
+    viewButtons.forEach(button => button.addEventListener('click', () => setView(button.dataset.view)));
+    renderMap();
+    renderDetail();
+    renderCards();
+  </script>
+</body>
+</html>

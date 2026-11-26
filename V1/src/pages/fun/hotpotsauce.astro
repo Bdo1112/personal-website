@@ -1,0 +1,437 @@
+---
+import Layout from '../../components/Layout.astro';
+import '../../styles/flavor-atlas.css';
+---
+<Layout title="Flavor Atlas" wide mainClass="atlas-main" bodyClass="atlas-page">
+  <div class="atlas-app">
+    <header class="atlas-titlebar"><span class="atlas-brand">Flavor Atlas</span><nav class="topnav" aria-label="Flavor Atlas sections" role="tablist"><button id="tab-discover" class="active" type="button" role="tab" aria-selected="true" aria-controls="discover">Discover</button><button id="tab-map" type="button" role="tab" aria-selected="false" aria-controls="flavor-map">Flavor Map</button></nav></header>
+    <div class="layout">
+      <button class="mobile-filter-toggle" type="button" id="mobile-filter-toggle" aria-expanded="false" aria-controls="filter-sidebar">Preferences & ingredients ▾</button>
+      <aside class="sidebar" id="filter-sidebar" aria-label="Sauce discovery filters">
+        <section class="sidebar-block" aria-labelledby="flavor-heading"><div class="section-head"><div><h2 id="flavor-heading">Flavors I like</h2><p>Choose whatever sounds good to you.</p></div><button class="text-btn" id="clear-flavors" type="button">Clear</button></div><div class="chip-wrap" id="flavor-chips" aria-label="Flavor preferences"></div></section>
+        <section class="sidebar-block" aria-labelledby="ingredient-heading"><div class="section-head"><div><h2 class="ingredient-heading" id="ingredient-heading">Ingredients I have <span class="selected-count" id="selected-count">0</span></h2><p>Choose the ingredients you have or want to try.</p><p class="pantry-note">Salt, sugar, and water are assumed available.</p></div><button class="text-btn" id="clear-ingredients" type="button">Clear</button></div><label for="ingredient-search" class="smallcaps subtle">Find an ingredient</label><input class="ingredient-search" id="ingredient-search" type="search" placeholder="Search sesame, garlic, chili…" autocomplete="off"/><div id="ingredient-groups"></div></section>
+        <div class="sidebar-footer">Selections update both views instantly. No sign-in required.</div>
+      </aside>
+      <div class="content">
+        <section id="discover" role="tabpanel" aria-labelledby="tab-discover"><div class="content-top"><div><h1>Sauces for you</h1><p>Explore 60 research recipes plus 2 Chongqing variations by flavor and the ingredients you have.</p></div><span class="count-label" id="results-count">62 sauces</span></div>
+          <div class="toolbar"><div class="toolbar-left"><label class="mode-toggle"><input type="checkbox" id="ready-only"/> Only show sauces I can make</label></div><select id="sort-select" class="sort-control" aria-label="Sort recipes"><option value="best">Best matches</option><option value="available">Most ingredients available</option><option value="simple">Fewest ingredients</option></select><input id="recipe-search" type="search" class="search-recipes" placeholder="Search sauces…" aria-label="Search sauce names"/></div>
+          <div class="recipe-list" id="recipe-results" aria-live="polite"></div><div class="page-foot">60 research sauce variations plus 2 Chongqing variations. Generated images are visual concepts, not photos of tested results. Amounts follow the original sources where available; Chongqing amounts are suggested and untested.</div>
+        </section>
+        <section id="flavor-map" role="tabpanel" aria-labelledby="tab-map" hidden><div class="content-top"><div><h1>Flavor Map</h1><p>Another way to wander through the sauce collection.</p></div><span class="count-label" id="map-count">62 of 62 match</span></div><div class="map-intro"><p>Each dot represents a sauce. Flavor matches are highlighted; “Only show sauces I can make” also checks your pantry. Select a dot to open its recipe.</p><button class="text-btn" id="map-reset" type="button">Clear filters</button></div><div class="map-frame"><div class="map-plot" id="map-plot" role="group" aria-label="Estimated sauce flavor map, heat left to right and richness bottom to top"><span class="map-label x-start">Mild</span><span class="map-label x-end">Spicy</span><span class="map-label y-start">Light</span><span class="map-label y-end">Rich</span></div><div class="map-meta"><div class="map-key"><span><span class="key-dot"></span> Matches</span><span><span class="key-dot faded"></span> Other sauces</span></div><span>Approximate editorial positions, not measured taste values.</span></div></div><div class="page-foot">Flavor coordinates are preliminary editorial estimates; Chongqing recipe positions are editorial estimates too. Their precision should not be interpreted as scientific measurement.</div></section>
+      </div>
+    </div>
+    <dialog class="dialog" id="recipe-dialog" aria-labelledby="dialog-title"><button type="button" class="dialog-close" id="dialog-close" aria-label="Close recipe">×</button><div class="dialog-inner" id="dialog-inner"></div><div class="dialog-footer" aria-label="Recipe actions"><button type="button" class="solid-btn" id="copy-ingredients">Copy ingredient list</button><button type="button" class="outline-btn" id="dialog-done">Back to exploring</button></div><div id="toast" class="toast" role="status" aria-live="polite" hidden></div></dialog>
+  </div>
+</Layout>
+<script>
+import data from '../../data/hotpotsauce/final-recipes.json';
+import familyData from '../../data/hotpotsauce/family-recipes.json';
+
+type Ingredient = { key: string; displayName?: string; sourceAmount: string; spoonEstimate?: string };
+type Recipe = {
+  id: string; name: string; nameZh?: string; nameKo?: string; description: string; region: string;
+  provenance: string; recipeStatus?: string; measurementStatus?: string; servings?: number;
+  sourceUrl?: string | null; sourceTitle?: string | null; sourceNote?: string; tags: string[];
+  tasteEstimate: { heat: number; richness: number }; image?: { src: string; alt: string } | null;
+  ingredients: Ingredient[];
+};
+type Analysis = {
+  recipe: Recipe;
+  relevant: Ingredient[];
+  available: number;
+  missing: Ingredient[];
+  flavorHits: number;
+  coverage: number;
+  matches: boolean;
+  score: number;
+};
+type TabName = 'discover' | 'map';
+
+const root = document.querySelector<HTMLElement>('.atlas-app')!;
+const $ = <T extends Element = HTMLElement>(selector: string): T => root.querySelector<T>(selector)!;
+const flavors: string[] = data.flavors;
+const ingredientGroups = data.ingredientGroups;
+const pantryStaples = new Set(data.pantryStaples);
+const recipes = [...data.recipes, ...familyData.recipes] as Recipe[];
+const state = {
+  flavors: new Set<string>(),
+  ingredients: new Set<string>(),
+  ingredientQuery: '',
+  recipeQuery: '',
+  readyOnly: false,
+  sort: 'best',
+  visibleCount: 18,
+};
+
+const safe = (value: unknown): string =>
+  String(value ?? '').replace(/[&<>"']/g, (char) => ({
+    '&': '&amp;',
+    '<': '&lt;',
+    '>': '&gt;',
+    '"': '&quot;',
+    "'": '&#39;',
+  })[char]!);
+
+function amount(ingredient: Ingredient): string {
+  return ingredient.spoonEstimate
+    ? `${ingredient.spoonEstimate} (${ingredient.sourceAmount})`
+    : ingredient.sourceAmount;
+}
+
+function analyze(recipe: Recipe): Analysis {
+  const required = recipe.ingredients.filter((ingredient) => !/\boptional\b/i.test(ingredient.sourceAmount));
+  const relevant = required.filter((ingredient) => !pantryStaples.has(ingredient.key));
+  const availableIngredients = relevant.filter((ingredient) => state.ingredients.has(ingredient.key));
+  const missing = relevant.filter((ingredient) => !state.ingredients.has(ingredient.key));
+  const flavorHits = recipe.tags.filter((tag) => state.flavors.has(tag)).length;
+  const coverage = relevant.length ? availableIngredients.length / relevant.length : 1;
+  const flavorPass = state.flavors.size === 0 || flavorHits > 0;
+  const readyPass = !state.readyOnly || missing.length === 0;
+  const query = state.recipeQuery.trim().toLowerCase();
+  const searchable = [
+    recipe.name,
+    recipe.nameZh ?? recipe.nameKo ?? '',
+    recipe.description,
+    recipe.tags.join(' '),
+    recipe.region,
+    recipe.ingredients.map((item) => `${item.key} ${item.displayName ?? item.key}`).join(' '),
+  ].join(' ').toLowerCase();
+
+  return {
+    recipe,
+    relevant,
+    available: availableIngredients.length,
+    missing,
+    flavorHits,
+    coverage,
+    matches: flavorPass && readyPass && (!query || searchable.includes(query)),
+    score: flavorHits * 3 + coverage * 2,
+  };
+}
+
+function matchingRecipes(): Analysis[] {
+  const nameOrder = (a: Analysis, b: Analysis) => a.recipe.name.localeCompare(b.recipe.name, 'en', { sensitivity: 'base' });
+  const hasPreferences = state.flavors.size > 0 || state.ingredients.size > 0;
+  const familyPickOrder = new Map([
+    ['cn-chongqing-traditional-garlic-oil', 0],
+    ['cn-chongqing-modern-family', 1],
+  ]);
+  return recipes.map(analyze).filter((item) => item.matches).sort((a, b) => {
+    if (state.sort === 'simple') return a.recipe.ingredients.length - b.recipe.ingredients.length || b.score - a.score || nameOrder(a, b);
+    if (state.sort === 'available') return b.coverage - a.coverage || b.flavorHits - a.flavorHits || nameOrder(a, b);
+    if (!hasPreferences && !state.recipeQuery.trim() && !state.readyOnly) {
+      const aPin = familyPickOrder.get(a.recipe.id);
+      const bPin = familyPickOrder.get(b.recipe.id);
+      if (aPin !== undefined || bPin !== undefined) return (aPin ?? Infinity) - (bPin ?? Infinity);
+      return nameOrder(a, b);
+    }
+    if (!hasPreferences) return nameOrder(a, b);
+    return b.score - a.score || b.coverage - a.coverage || nameOrder(a, b);
+  });
+}
+
+function renderFlavors(): void {
+  const focused = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.flavor : undefined;
+  $('#flavor-chips').innerHTML = flavors.map((flavor) => `
+    <button class="chip" type="button" data-flavor="${safe(flavor)}" aria-pressed="${state.flavors.has(flavor)}">
+      <span class="check" aria-hidden="true">✓</span>${safe(flavor)}
+    </button>`).join('');
+  if (focused) root.querySelector<HTMLElement>(`[data-flavor="${CSS.escape(focused)}"]`)?.focus();
+}
+
+function renderIngredients(): void {
+  const focused = document.activeElement instanceof HTMLElement ? document.activeElement.dataset.ingredient : undefined;
+  const query = state.ingredientQuery.trim().toLowerCase();
+  const openGroups = new Set(
+    [...root.querySelectorAll<HTMLElement>('.ingredient-group[open]')].map((group) => group.dataset.group),
+  );
+  if (!$('#ingredient-groups').children.length) openGroups.add('Sauce bases');
+
+  $('#ingredient-groups').innerHTML = ingredientGroups.map((group) => {
+    const selectableItems = group.items.filter((item) => !pantryStaples.has(item));
+    const visibleItems = selectableItems.filter((item) => item.toLowerCase().includes(query));
+    if (!visibleItems.length) return '';
+    const selectedCount = selectableItems.filter((item) => state.ingredients.has(item)).length;
+    const expanded = query.length > 0 || openGroups.has(group.name);
+    return `
+      <details class="ingredient-group" data-group="${safe(group.name)}" ${expanded ? 'open' : ''}>
+        <summary>${safe(group.name)}<span class="group-meta">${selectedCount ? `${selectedCount} selected` : `${selectableItems.length} options`} <span class="chevron" aria-hidden="true"></span></span></summary>
+        <div class="chip-wrap">${visibleItems.map((item) => `
+          <button class="chip" type="button" data-ingredient="${safe(item)}" aria-pressed="${state.ingredients.has(item)}">
+            <span class="check" aria-hidden="true">✓</span>${safe(item)}
+          </button>`).join('')}
+        </div>
+      </details>`;
+  }).join('') || '<p class="subtle">No ingredient found. Try a shorter search.</p>';
+  $('#selected-count').textContent = String([...state.ingredients].filter((item) => !pantryStaples.has(item)).length);
+  if (focused) root.querySelector<HTMLElement>(`[data-ingredient="${CSS.escape(focused)}"]`)?.focus();
+}
+
+function availabilityText(item: Analysis): string {
+  if (!state.ingredients.size) {
+    return '<span class="availability">Choose your ingredients to see availability</span>';
+  }
+  if (!item.missing.length) {
+    return '<span class="availability good"><strong>Ready to make</strong> · You have every required ingredient</span>';
+  }
+  const missingNames = item.missing.slice(0, 2).map((ingredient) => ingredient.displayName || ingredient.key);
+  const extra = item.missing.length > 2 ? ` +${item.missing.length - 2}` : '';
+  return `<span class="availability"><strong>${item.available}/${item.relevant.length} ingredients</strong> · Missing ${safe(missingNames.join(', '))}${extra}</span>`;
+}
+
+function recipeCard(item: Analysis): string {
+  const recipe = item.recipe;
+  const tags = recipe.tags.map((tag) => `
+    <span class="tag ${tag === 'Spicy' ? 'spicy' : ''}">${safe(tag)}</span>`).join('');
+  return `
+    <article class="recipe-card">
+      <div class="visual photo">${recipe.image ? `<img class="sauce-photo" src="${safe(recipe.image.src)}" alt="${safe(recipe.image.alt)}" width="960" height="960" loading="lazy" decoding="async">` : '<span class="no-photo">No photo yet</span>'}</div>
+      <div class="recipe-body">
+        <div class="recipe-topline"><span>${safe(recipe.region)}</span><span>${recipe.ingredients.length} ingredients</span></div>
+        <h2 class="recipe-name">${safe(recipe.name)}${recipe.nameZh || recipe.nameKo ? ` <span class="subtle">· ${safe(recipe.nameZh ?? recipe.nameKo)}</span>` : ''}</h2>
+        <p class="recipe-desc">${safe(recipe.description)}</p>
+        <div class="tags">${tags}</div>
+        <div class="recipe-bottom">${availabilityText(item)}<button type="button" class="recipe-action" data-recipe="${safe(recipe.id)}" aria-label="See recipe for ${safe(recipe.name)}">See recipe →</button></div>
+      </div>
+    </article>`;
+}
+
+function renderResults(): void {
+  const matches = matchingRecipes();
+  $('#results-count').textContent = `${matches.length} ${matches.length === 1 ? 'sauce' : 'sauces'}`;
+  if (matches.length) {
+    const cards = matches.slice(0, state.visibleCount).map(recipeCard).join('');
+    const more = matches.length > state.visibleCount
+      ? `<div class="load-more-row"><button class="solid-btn" id="load-more">Show more sauces (${matches.length - state.visibleCount} remaining)</button></div>`
+      : '';
+    $('#recipe-results').innerHTML = cards + more;
+    return;
+  }
+
+  const message = state.readyOnly
+    ? 'No recipe has all its non-staple ingredients selected. Choose more ingredients or turn off “Only show sauces I can make”.'
+    : 'Try selecting fewer flavors or searching for something different.';
+  $('#recipe-results').innerHTML = `
+    <div class="empty"><h3>No sauces yet</h3><p>${message}</p><button class="solid-btn" id="empty-reset">Reset filters</button></div>`;
+}
+
+function mapOffsets(count: number): [number, number][] {
+  if (count === 2) return [[-2.8, 0], [2.8, 0]];
+  if (count === 3) return [[-2.8, 2.8], [2.8, 2.8], [0, -2.8]];
+  if (count >= 4) return [[-2.8, 2.8], [2.8, 2.8], [-2.8, -2.8], [2.8, -2.8]];
+  return [[0, 0]];
+}
+
+function renderMap(): void {
+  const all = recipes.map(analyze);
+  $('#map-count').textContent = `${all.filter((item) => item.matches).length} of ${recipes.length} match`;
+  root.querySelectorAll('.map-dot').forEach((dot) => dot.remove());
+  const groups = new Map<string, Analysis[]>();
+  all.forEach((item) => {
+    const recipe = item.recipe;
+    const key = `${recipe.tasteEstimate.heat}-${recipe.tasteEstimate.richness}`;
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key)!.push(item);
+  });
+
+  groups.forEach((items) => items.forEach((item, index) => {
+    const recipe = item.recipe;
+    const dot = document.createElement('button');
+    dot.type = 'button';
+    dot.className = `map-dot ${recipe.tasteEstimate.heat >= 6 ? 'hot' : ''} ${item.matches ? 'highlight' : 'dim'}`;
+    const [offsetX, offsetY] = mapOffsets(items.length)[index] ?? [0, 0];
+    const x = Math.max(2, Math.min(98, 5 + recipe.tasteEstimate.heat * 9 + offsetX));
+    const y = Math.max(2, Math.min(98, 5 + recipe.tasteEstimate.richness * 9 + offsetY));
+    dot.style.left = `${x}%`;
+    dot.style.bottom = `${y}%`;
+    dot.setAttribute('aria-label', `${recipe.name}; estimated heat ${recipe.tasteEstimate.heat} of 10, richness ${recipe.tasteEstimate.richness} of 10; ${item.matches ? 'matches filters' : 'outside filters'}`);
+    dot.title = `${recipe.name}\nHeat ${recipe.tasteEstimate.heat}/10 · Richness ${recipe.tasteEstimate.richness}/10`;
+    dot.dataset.recipe = recipe.id;
+    $('#map-plot').append(dot);
+  }));
+}
+
+function renderAll(): void {
+  renderFlavors();
+  renderIngredients();
+  renderResults();
+  renderMap();
+}
+
+function clearFilters(): void {
+  state.flavors.clear();
+  state.ingredients.clear();
+  state.ingredientQuery = '';
+  state.recipeQuery = '';
+  state.readyOnly = false;
+  state.visibleCount = 18;
+  $<HTMLInputElement>('#ingredient-search').value = '';
+  $<HTMLInputElement>('#recipe-search').value = '';
+  $<HTMLInputElement>('#ready-only').checked = false;
+  renderAll();
+}
+
+function showTab(name: TabName): void {
+  const showMap = name === 'map';
+  $('#discover').toggleAttribute('hidden', showMap);
+  $('#flavor-map').toggleAttribute('hidden', !showMap);
+  $('#tab-discover').classList.toggle('active', !showMap);
+  $('#tab-map').classList.toggle('active', showMap);
+  $('#tab-discover').setAttribute('aria-selected', String(!showMap));
+  $('#tab-map').setAttribute('aria-selected', String(showMap));
+  $('#tab-discover').tabIndex = showMap ? -1 : 0;
+  $('#tab-map').tabIndex = showMap ? 0 : -1;
+}
+
+let activeRecipe: Recipe | null = null;
+
+function showRecipe(id: string): void {
+  const recipe = recipes.find((item) => item.id === id);
+  if (!recipe) return;
+  activeRecipe = recipe;
+  const item = analyze(recipe);
+  const tags = recipe.tags.map((tag) => `
+    <span class="tag ${tag === 'Spicy' ? 'spicy' : ''}">${safe(tag)}</span>`).join('');
+  const ingredients = recipe.ingredients.map((ingredient) => `
+    <li><span>${state.ingredients.has(ingredient.key) || pantryStaples.has(ingredient.key) ? '✓ ' : ''}${safe(ingredient.displayName || ingredient.key)}</span><em>${safe(amount(ingredient))}</em></li>`).join('');
+  const source = recipe.sourceUrl
+    ? `Source: <a href="${safe(recipe.sourceUrl)}" target="_blank" rel="noopener noreferrer">${safe(recipe.sourceTitle || 'Read original recipe')} ↗</a>`
+    : `Source: ${safe(recipe.sourceTitle || 'Flavor Atlas original concept; untested.')}`;
+  const notes = recipe.sourceNote ? `<p class="source-note">${safe(recipe.sourceNote)}</p>` : '';
+  const measurementNote = recipe.measurementStatus === 'suggested' || recipe.recipeStatus === 'original_untested'
+    ? 'Suggested starting amounts; this original concept has not been tested.'
+    : 'Source amounts are preserved as published; spoon estimates are shown where supplied. No conversions have been inferred.';
+  $('#dialog-inner').innerHTML = `
+    <div class="dialog-photo">${recipe.image ? `<img src="${safe(recipe.image.src)}" alt="${safe(recipe.image.alt)}">` : '<span class="no-photo">No photo yet</span>'}</div>
+    <span class="smallcaps subtle">${safe(recipe.region)} · ${safe(recipe.provenance)}</span>
+    <h2 id="dialog-title">${safe(recipe.name)}${recipe.nameZh || recipe.nameKo ? ` · ${safe(recipe.nameZh ?? recipe.nameKo)}` : ''}</h2>
+    <p class="lead">${safe(recipe.description)}</p><div class="tags">${tags}</div>
+    <h3>Ingredients</h3><ul class="dialog-list">${ingredients}</ul>
+    <p class="measurement-note">${measurementNote}</p>
+    ${notes}<h3>Flavor estimates</h3>
+    <p class="note">Heat ${recipe.tasteEstimate.heat}/10 · Richness ${recipe.tasteEstimate.richness}/10. These are editorial estimates, not measured values.</p>
+    <p class="availability">${state.ingredients.size ? `${item.available} of ${item.relevant.length} non-staple ingredients selected` : 'Select ingredients to track what you have.'}</p>
+    <div class="dialog-source">${source}</div>`;
+  $('#dialog-inner').scrollTop = 0;
+  $<HTMLDialogElement>('#recipe-dialog').showModal();
+}
+
+let toastTimer = 0;
+function toast(message: string): void {
+  const element = $('#toast');
+  element.textContent = message;
+  element.removeAttribute('hidden');
+  window.clearTimeout(toastTimer);
+  toastTimer = window.setTimeout(() => element.setAttribute('hidden', ''), 2600);
+}
+
+$('#flavor-chips').addEventListener('click', (event) => {
+  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-flavor]');
+  if (!button) return;
+  const flavor = button.dataset.flavor!;
+  state.flavors.has(flavor) ? state.flavors.delete(flavor) : state.flavors.add(flavor);
+  renderAll();
+});
+$('#ingredient-groups').addEventListener('click', (event) => {
+  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-ingredient]');
+  if (!button) return;
+  const ingredient = button.dataset.ingredient!;
+  state.ingredients.has(ingredient) ? state.ingredients.delete(ingredient) : state.ingredients.add(ingredient);
+  renderAll();
+});
+$('#ingredient-search').addEventListener('input', (event) => {
+  state.ingredientQuery = (event.target as HTMLInputElement).value;
+  renderIngredients();
+});
+$('#recipe-search').addEventListener('input', (event) => {
+  state.recipeQuery = (event.target as HTMLInputElement).value;
+  state.visibleCount = 18;
+  renderResults();
+  renderMap();
+});
+$('#ready-only').addEventListener('change', (event) => {
+  state.readyOnly = (event.target as HTMLInputElement).checked;
+  renderResults();
+  renderMap();
+});
+$('#sort-select').addEventListener('change', (event) => {
+  state.sort = (event.target as HTMLSelectElement).value;
+  renderResults();
+});
+$('#clear-flavors').addEventListener('click', () => { state.flavors.clear(); renderAll(); });
+$('#clear-ingredients').addEventListener('click', () => { state.ingredients.clear(); renderAll(); });
+$('#map-reset').addEventListener('click', clearFilters);
+$('#tab-discover').addEventListener('click', () => showTab('discover'));
+$('#tab-map').addEventListener('click', () => showTab('map'));
+root.querySelector('[role="tablist"]')!.addEventListener('keydown', (event) => {
+  const keyboardEvent = event as KeyboardEvent;
+  if (keyboardEvent.key !== 'ArrowLeft' && keyboardEvent.key !== 'ArrowRight') return;
+  const tabs = [$<HTMLButtonElement>('#tab-discover'), $<HTMLButtonElement>('#tab-map')];
+  const currentIndex = tabs.indexOf(document.activeElement as HTMLButtonElement);
+  const direction = keyboardEvent.key === 'ArrowRight' ? 1 : -1;
+  const next = tabs[(currentIndex + direction + tabs.length) % tabs.length];
+  keyboardEvent.preventDefault();
+  next.focus();
+  next.click();
+});
+
+$('#recipe-results').addEventListener('click', (event) => {
+  const target = event.target as HTMLElement;
+  if (target.closest('#empty-reset')) { clearFilters(); return; }
+  if (target.closest('#load-more')) { state.visibleCount += 18; renderResults(); return; }
+  const button = target.closest<HTMLElement>('[data-recipe]');
+  if (button) showRecipe(button.dataset.recipe!);
+});
+$('#map-plot').addEventListener('click', (event) => {
+  const button = (event.target as HTMLElement).closest<HTMLElement>('[data-recipe]');
+  if (button) showRecipe(button.dataset.recipe!);
+});
+$('#dialog-close').addEventListener('click', () => $<HTMLDialogElement>('#recipe-dialog').close());
+$('#dialog-done').addEventListener('click', () => $<HTMLDialogElement>('#recipe-dialog').close());
+$('#recipe-dialog').addEventListener('close', () => { activeRecipe = null; });
+$('#recipe-dialog').addEventListener('click', (event) => {
+  if (event.target === $<HTMLDialogElement>('#recipe-dialog')) $<HTMLDialogElement>('#recipe-dialog').close();
+});
+$('#copy-ingredients').addEventListener('click', async () => {
+  if (!activeRecipe) return;
+  const lines = activeRecipe.ingredients.map((ingredient) => `• ${ingredient.displayName || ingredient.key}: ${amount(ingredient)}`);
+  const source = activeRecipe.sourceUrl
+    ? `\n\nSource: ${activeRecipe.sourceUrl}`
+    : activeRecipe.sourceTitle
+      ? `\n\nSource: ${activeRecipe.sourceTitle}`
+      : '\n\nSource: Flavor Atlas original concept; untested.';
+  try {
+    await navigator.clipboard.writeText(`${activeRecipe.name}\n\n${lines.join('\n')}${source}`);
+    toast('Ingredient list copied');
+  } catch {
+    toast('Clipboard unavailable in this browser.');
+  }
+});
+$('#mobile-filter-toggle').addEventListener('click', (event) => {
+  const sidebar = $('#filter-sidebar');
+  const collapsed = sidebar.classList.toggle('collapsed');
+  const button = event.currentTarget as HTMLButtonElement;
+  button.setAttribute('aria-expanded', String(!collapsed));
+  button.textContent = collapsed ? 'Preferences & ingredients ▾' : 'Hide preferences & ingredients ▴';
+});
+const mobileLayout = window.matchMedia('(max-width: 800px)');
+function syncSidebarLayout(): void {
+  const sidebar = $('#filter-sidebar');
+  const toggle = $('#mobile-filter-toggle');
+  if (!mobileLayout.matches) {
+    sidebar.classList.remove('collapsed');
+    toggle.setAttribute('aria-expanded', 'true');
+    toggle.textContent = 'Preferences & ingredients ▾';
+    toggle.hidden = true;
+  } else {
+    toggle.hidden = false;
+    sidebar.classList.add('collapsed');
+    toggle.setAttribute('aria-expanded', 'false');
+    toggle.textContent = 'Preferences & ingredients ▾';
+  }
+}
+mobileLayout.addEventListener('change', syncSidebarLayout);
+syncSidebarLayout();
+showTab('discover');
+renderAll();
+</script>

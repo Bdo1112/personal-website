@@ -4,9 +4,12 @@ import '../styles/global.css';
 
 interface Props {
   title?: string;
+  wide?: boolean;
+  mainClass?: string;
+  bodyClass?: string;
 }
 
-const { title = 'Brian Oh' } = Astro.props;
+const { title = 'Brian Oh', wide = false, mainClass = '', bodyClass = '' } = Astro.props;
 ---
 
 <html lang="en">
@@ -17,9 +20,9 @@ const { title = 'Brian Oh' } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title === 'Brian Oh' ? title : `${title} — Brian Oh`}</title>
   </head>
-  <body class="bg-white text-gray-900 antialiased">
-    <Navbar />
-    <main class="max-w-2xl mx-auto px-6 py-12">
+  <body class={`bg-white text-gray-900 antialiased ${bodyClass}`}>
+    <Navbar wide={wide} />
+    <main class={`${wide ? 'max-w-7xl' : 'max-w-2xl'} mx-auto px-6 py-12 ${mainClass}`}>
       <slot />
     </main>
   </body>

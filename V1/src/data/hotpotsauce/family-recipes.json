@@ -1,0 +1,102 @@
+{
+  "recipes": [
+    {
+      "id": "cn-chongqing-traditional-garlic-oil",
+      "researchId": "cn-chongqing-traditional-garlic-oil",
+      "name": "Traditional Chongqing Garlic Oil",
+      "nameZh": "重庆蒜泥香油碟",
+      "description": "A classic Chongqing-style hot pot dipping sauce made with fragrant sesame oil and freshly minced garlic.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Traditional-style combination with suggested proportions",
+      "recipeStatus": "original_untested",
+      "measurementStatus": "suggested",
+      "servings": 1,
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "tags": [
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 7,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/traditional-chongqing-garlic-oil.png",
+        "alt": "Golden sesame oil with finely minced garlic in a ceramic bowl",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "3 tbsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Finely minced garlic",
+          "sourceAmount": "1 tbsp"
+        }
+      ],
+      "sourceNote": "Ingredient combination is traditional; the specific measurements are suggested starting quantities and have not been tested."
+    },
+    {
+      "id": "cn-chongqing-modern-family",
+      "researchId": "cn-chongqing-modern-family",
+      "name": "Modern Chongqing Family Sauce",
+      "nameZh": "重庆家庭版蒜泥油碟",
+      "description": "A modern family-style variation combining sesame oil, garlic, oyster sauce, fresh cilantro, and Thai bird's-eye chili.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Family-style combination with suggested proportions",
+      "recipeStatus": "original_untested",
+      "measurementStatus": "suggested",
+      "servings": 1,
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "tags": [
+        "Spicy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 7,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/modern-family-variation-thai-chili.png",
+        "alt": "Sesame oil dipping sauce with garlic, oyster sauce, cilantro, and sliced Thai chili peppers",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Finely minced garlic",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Chopped fresh cilantro",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Finely chopped Thai bird's-eye chili",
+          "sourceAmount": "1/2 tsp"
+        }
+      ],
+      "sourceNote": "The ingredient combination is common in Chongqing-style hot pot dipping sauces; the specific measurements are suggested and untested."
+    }
+  ]
+}

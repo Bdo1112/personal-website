@@ -1,0 +1,4013 @@
+{
+  "schemaVersion": 1,
+  "dataset": "Flavor Atlas · complete research collection",
+  "status": "Research-based variations; some source measurements incomplete; originals untested",
+  "imagePolicy": "Original generated image concepts, not kitchen-tested food photography",
+  "unitPolicy": "Original source measurements preserved; spoon/gram conversions are not silently inferred",
+  "flavors": [
+    "Spicy",
+    "Nutty",
+    "Creamy",
+    "Tangy",
+    "Savory",
+    "Fresh"
+  ],
+  "ingredientGroups": [
+    {
+      "name": "Sauce bases",
+      "items": [
+        "Black sesame paste",
+        "Chili sauce",
+        "Fermented tofu",
+        "Gochujang",
+        "Green mountain-pepper chili sauce (山椒酱)",
+        "Miso",
+        "Mushroom sauce",
+        "Peanut sauce",
+        "Red fermented tofu",
+        "Red fermented tofu liquid",
+        "Sesame paste",
+        "Shacha sauce",
+        "Sour plum sauce",
+        "Sweet chili sauce",
+        "Unsweetened tomato sauce"
+      ]
+    },
+    {
+      "name": "Savory & liquids",
+      "items": [
+        "Chicken bouillon",
+        "Chive-flower sauce",
+        "Cooking wine",
+        "Corn oil",
+        "Dashi",
+        "Fish sauce",
+        "Ginger oil",
+        "Kombu dashi",
+        "Minced meat",
+        "Minced meat topping",
+        "Nikiri mirin (cooked to remove alcohol)",
+        "Olive oil",
+        "Oyster sauce",
+        "Qingyou hot pot sauce",
+        "Scallion oil",
+        "Seafood soy sauce",
+        "Sesame oil",
+        "Soy sauce",
+        "Spicy beef sauce",
+        "Stir-fried beef paste",
+        "Stir-fried beef sauce"
+      ]
+    },
+    {
+      "name": "Fresh aromatics",
+      "items": [
+        "Cilantro",
+        "Cilantro roots",
+        "Garlic",
+        "Ginger",
+        "Onion",
+        "Sand ginger",
+        "Scallion",
+        "Shallots"
+      ]
+    },
+    {
+      "name": "Chili & spice",
+      "items": [
+        "Chili crisp",
+        "Chili oil",
+        "Chili powder",
+        "Five-spice beef topping",
+        "Fresh chili",
+        "Green Sichuan pepper oil",
+        "Mala seasoning",
+        "Prepared wasabi",
+        "Sambal",
+        "Sichuan pepper",
+        "Sichuan pepper oil",
+        "Smoked paprika",
+        "Thai chili",
+        "Thai chili powder",
+        "Wasabi/horseradish",
+        "Water infused with star anise, bay leaf, Sichuan pepper",
+        "White pepper"
+      ]
+    },
+    {
+      "name": "Acid & citrus",
+      "items": [
+        "Aged vinegar",
+        "Black vinegar",
+        "Citrus juice (lemon plus a little orange/grapefruit)",
+        "Fragrant vinegar",
+        "Lemon / yuzu",
+        "Lemon juice",
+        "Lime",
+        "Lime / citrus",
+        "Ponzu",
+        "Rice vinegar",
+        "Tamarind paste",
+        "Vinegar"
+      ]
+    },
+    {
+      "name": "Crunch & extras",
+      "items": [
+        "Bonito flakes",
+        "Crumbled roasted nori",
+        "Crushed peanuts",
+        "Dried shrimp",
+        "Ground sesame",
+        "Kombu",
+        "Minced zha cai (pickled mustard stem)",
+        "MSG",
+        "Peanut powder",
+        "Salt",
+        "Sesame seeds",
+        "Sugar",
+        "Toasted sticky-rice powder",
+        "Water"
+      ]
+    },
+    {
+      "name": "More ingredients",
+      "items": [
+        "Finely grated zest",
+        "Jalapeño slices",
+        "Lao Gan Ma",
+        "Peanut oil",
+        "Roasted shrimp paste"
+      ]
+    }
+  ],
+  "pantryStaples": [
+    "Salt",
+    "Sugar",
+    "Water"
+  ],
+  "recipes": [
+    {
+      "id": "kr-mark-2025",
+      "researchId": "kr-mark-2025",
+      "name": "Mark Sauce (2025)",
+      "nameKo": "마크소스",
+      "description": "A Korean-style hot pot combination with peanut sauce, minced garlic and chopped onion.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "Esquire's published account; not a direct primary-video verification. T denotes the source's spoon measure.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 7,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-mark-2025.webp",
+        "alt": "AI-generated visual interpretation of Mark Sauce (2025) dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "2 T"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1.5 T"
+        },
+        {
+          "key": "Onion",
+          "displayName": "Chopped onion",
+          "sourceAmount": "1.5 T"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chilies",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "2 T"
+        },
+        {
+          "key": "Minced meat",
+          "displayName": "Minced meat",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Peanut powder",
+          "displayName": "Peanut powder",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Chili powder",
+          "displayName": "Chili powder",
+          "sourceAmount": "a little"
+        }
+      ]
+    },
+    {
+      "id": "kr-felix-2025",
+      "researchId": "kr-felix-2025",
+      "name": "Felix Sauce",
+      "nameKo": "필릭스소스",
+      "description": "A Korean-style hot pot combination with peanut sauce, minced garlic and scallion.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "Mala seasoning and qingyou sauce are specialty products whose heat and salt vary.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 8,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-felix-2025.webp",
+        "alt": "AI-generated visual interpretation of Felix Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "2 pinches"
+        },
+        {
+          "key": "Mala seasoning",
+          "displayName": "Mala seasoning",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Onion",
+          "displayName": "Chopped onion",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Qingyou hot pot sauce",
+          "displayName": "Qingyou hot pot sauce",
+          "sourceAmount": "1 T"
+        }
+      ]
+    },
+    {
+      "id": "kr-in-2025",
+      "researchId": "kr-in-2025",
+      "name": "I.N Mushroom Beef Sauce",
+      "nameKo": "아이엔소스",
+      "description": "A Korean-style hot pot combination with peanut sauce, mushroom sauce and minced garlic.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "May contain meat and multiple savory condiments.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-in-2025.webp",
+        "alt": "AI-generated visual interpretation of I.N Mushroom Beef Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Mushroom sauce",
+          "displayName": "Mushroom sauce",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 heaping T"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "2 pinches"
+        },
+        {
+          "key": "Five-spice beef topping",
+          "displayName": "Five-spice beef topping",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Spicy beef sauce",
+          "displayName": "Spicy beef sauce",
+          "sourceAmount": "1 T"
+        }
+      ]
+    },
+    {
+      "id": "kr-yuqi-2025",
+      "researchId": "kr-yuqi-2025",
+      "name": "Yuqi Vinegar Herb Sauce",
+      "nameKo": "우기소스",
+      "description": "A Korean-style hot pot combination with peanut sauce, scallion and cilantro.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported_partial_quantities",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "An explicitly sour-forward formula; no invented exact measures for unspecified ingredients.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Tangy",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 1,
+        "richness": 5,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-yuqi-2025.webp",
+        "alt": "AI-generated visual interpretation of Yuqi Vinegar Herb Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "unspecified"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "unspecified"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Garlic",
+          "sourceAmount": "plenty"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Vinegar",
+          "sourceAmount": "very generous amount"
+        },
+        {
+          "key": "Peanut powder",
+          "displayName": "Peanut powder",
+          "sourceAmount": "1 T"
+        }
+      ]
+    },
+    {
+      "id": "geonhee",
+      "image": {
+        "src": "/images/sauces/geonhee.webp",
+        "alt": "AI-generated visual interpretation of Geonhee Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "kr-geonhee-2025",
+      "name": "Geonhee Sauce",
+      "description": "A maximalist, peanut-forward Korean combination: hot, savory and richly textured.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Published variation (2025)",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Chili sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Garlic",
+          "sourceAmount": "1 tbsp, minced"
+        },
+        {
+          "key": "Chili oil",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Spicy beef sauce",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Oyster sauce",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Thai chili",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Crushed peanuts",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Ground sesame",
+          "sourceAmount": "to taste"
+        }
+      ],
+      "nameKo": "건희소스 2025 버전",
+      "sourceNote": "Distinct from earlier versions of Geonhee Sauce; do not conflate their measurements.",
+      "recipeStatus": "source_reported_partial_quantities"
+    },
+    {
+      "id": "kr-seongchan-2025",
+      "researchId": "kr-seongchan-2025",
+      "name": "Seongchan Sesame Beef Sauce",
+      "nameKo": "성찬소스",
+      "description": "A Korean-style hot pot combination with sesame sauce, chili sauce and minced meat topping.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported_partial_quantities",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "Savory sesame-meat combination; meat topping identity varies by sauce bar.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-seongchan-2025.webp",
+        "alt": "AI-generated visual interpretation of Seongchan Sesame Beef Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame sauce",
+          "sourceAmount": "2 T"
+        },
+        {
+          "key": "Chili sauce",
+          "displayName": "Chili sauce",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Minced meat topping",
+          "displayName": "Minced meat topping",
+          "sourceAmount": "2 T"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Small scallion",
+          "sourceAmount": "plenty"
+        },
+        {
+          "key": "Peanut powder",
+          "displayName": "Peanut powder",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Large scallion",
+          "sourceAmount": "0.5 T"
+        }
+      ]
+    },
+    {
+      "id": "kr-sohee-2025",
+      "researchId": "kr-sohee-2025",
+      "name": "Sohee Sesame Oil Sauce",
+      "nameKo": "소희소스",
+      "description": "A Korean-style hot pot combination with sesame oil, minced garlic and scallion.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported_partial_quantities",
+      "sourceUrl": "https://www.esquirekorea.co.kr/article/1880880",
+      "sourceTitle": "2025년 버전 아이돌의 하이디라오 소스 레시피",
+      "sourceNote": "Oil-forward variation; quantities are source-specific, not necessarily a small single portion.",
+      "tags": [
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 3,
+        "richness": 7,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-sohee-2025.webp",
+        "alt": "AI-generated visual interpretation of Sohee Sesame Oil Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "3 T"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 T"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "unspecified"
+        },
+        {
+          "key": "Stir-fried beef sauce",
+          "displayName": "Stir-fried beef sauce",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Chili sauce",
+          "displayName": "Chili sauce",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 T"
+        }
+      ]
+    },
+    {
+      "id": "kaitlin",
+      "image": {
+        "src": "/images/sauces/kaitlin.webp",
+        "alt": "AI-generated visual interpretation of Kaitlin's Shacha Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "woks-kaitlin",
+      "name": "Kaitlin’s Shacha Sesame",
+      "description": "Shacha, nutty sesame and fresh herbs make a richly layered dip.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Published recipe",
+      "sourceUrl": "https://thewoksoflife.com/hot-pot-dipping-sauce/",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Savory",
+        "Creamy",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Shacha sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "White pepper",
+          "sourceAmount": "pinch"
+        },
+        {
+          "key": "Garlic",
+          "sourceAmount": "1 tbsp, minced"
+        },
+        {
+          "key": "Cilantro",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "2 tbsp"
+        }
+      ],
+      "nameKo": "사차 참깨 마늘 소스",
+      "sourceNote": "Kaitlin's personal blend on The Woks of Life.",
+      "recipeStatus": "source_cook_authored"
+    },
+    {
+      "id": "woks-bill",
+      "researchId": "woks-bill",
+      "name": "Bill's Shacha Peanut",
+      "nameKo": "사차 땅콩 소스",
+      "description": "A Chinese-family dipping sauce with shacha sauce, peanut butter and light soy sauce.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://thewoksoflife.com/hot-pot-dipping-sauce/",
+      "sourceTitle": "How to Make a Hot Pot Dipping Sauce",
+      "sourceNote": "Bill's peanut-forward adaptation.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/woks-bill.webp",
+        "alt": "AI-generated visual interpretation of Bill's Shacha Peanut dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut butter",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "2 tbsp"
+        }
+      ]
+    },
+    {
+      "id": "woks-judy",
+      "researchId": "woks-judy",
+      "name": "Judy's Soy-Chili Herb",
+      "nameKo": "간장 고추 허브 소스",
+      "description": "A Chinese-family dipping sauce with light soy sauce, chili oil (more flakes than oil) and shacha sauce.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://thewoksoflife.com/hot-pot-dipping-sauce/",
+      "sourceTitle": "How to Make a Hot Pot Dipping Sauce",
+      "sourceNote": "Soy-forward and comparatively light-bodied.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 3,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/woks-judy.webp",
+        "alt": "AI-generated visual interpretation of Judy's Soy-Chili Herb dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil (more flakes than oil)",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tbsp"
+        }
+      ]
+    },
+    {
+      "id": "woks-sarah",
+      "researchId": "woks-sarah",
+      "name": "Sarah's Extra-Creamy Sesame",
+      "nameKo": "진한 참깨 사차 소스",
+      "description": "A Chinese-family dipping sauce with chinese sesame paste, shacha sauce and soy sauce.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://thewoksoflife.com/hot-pot-dipping-sauce/",
+      "sourceTitle": "How to Make a Hot Pot Dipping Sauce",
+      "sourceNote": "Thick sesame-led sauce; source indicates a larger portion.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 10,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/woks-sarah.webp",
+        "alt": "AI-generated visual interpretation of Sarah's Extra-Creamy Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Chinese sesame paste",
+          "sourceAmount": "2.5 tbsp"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Sesame seeds",
+          "sourceAmount": "1 tsp (optional)"
+        }
+      ]
+    },
+    {
+      "id": "justin",
+      "image": {
+        "src": "/images/sauces/justin.webp",
+        "alt": "AI-generated visual interpretation of Justin's Black Vinegar Shacha dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "woks-justin",
+      "name": "Justin’s Black Vinegar Shacha",
+      "description": "A clean, herb-fresh sauce led by black vinegar and a touch of shacha.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Published recipe",
+      "sourceUrl": "https://thewoksoflife.com/hot-pot-dipping-sauce/",
+      "tags": [
+        "Tangy",
+        "Fresh",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 3,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Black vinegar",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Shacha sauce",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Garlic",
+          "sourceAmount": "1 tbsp, minced"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Cilantro",
+          "sourceAmount": "1 tbsp"
+        }
+      ],
+      "nameKo": "흑식초 사차 소스",
+      "sourceNote": "Black-vinegar-forward family combination.",
+      "recipeStatus": "source_cook_authored"
+    },
+    {
+      "id": "cn-sichuan-garlic-oil",
+      "researchId": "cn-sichuan-garlic-oil",
+      "name": "Sichuan Garlic Oil Dip",
+      "nameKo": "사천식 마늘 기름장",
+      "description": "A regional Chinese-inspired dipping sauce with corn oil, sesame oil and green sichuan pepper oil.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://www.xiachufang.com/recipe/107023619/",
+      "sourceTitle": "家庭火锅准备全实录（含油碟、麻酱碟、沙茶酱碟配方）",
+      "sourceNote": "Source explicitly gives a two-person batch and non-standard spoon sizes. Oil-heavy regional style, not a universal standard formula.",
+      "tags": [
+        "Nutty",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 1,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-sichuan-garlic-oil.webp",
+        "alt": "AI-generated visual interpretation of Sichuan Garlic Oil Dip dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Corn oil",
+          "displayName": "Corn oil",
+          "sourceAmount": "7 source spoonfuls"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "2 source spoonfuls"
+        },
+        {
+          "key": "Green Sichuan pepper oil",
+          "displayName": "Green Sichuan pepper oil",
+          "sourceAmount": "0.5 spoonful"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Garlic paste",
+          "sourceAmount": "2 heaping spoonfuls"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 spoonful"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "2 spoonfuls"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "2 spoonfuls"
+        }
+      ]
+    },
+    {
+      "id": "northern",
+      "image": {
+        "src": "/images/sauces/northern.webp",
+        "alt": "AI-generated visual interpretation of Northern Sesame and Fermented Tofu dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "cn-northern-sesame-furu",
+      "name": "Northern Sesame & Fermented Tofu",
+      "description": "Deeply savory sesame paste with the funk of fermented tofu.",
+      "region": "NORTHERN CHINESE",
+      "provenance": "Community recipe",
+      "sourceUrl": "https://www.xiachufang.com/recipe/107023619/",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "2 spoonfuls"
+        },
+        {
+          "key": "Fermented tofu",
+          "sourceAmount": "1/2 cube"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "3 spoonfuls"
+        },
+        {
+          "key": "Sugar",
+          "sourceAmount": "1 spoonful"
+        },
+        {
+          "key": "Chive-flower sauce",
+          "sourceAmount": "1/2 spoonful"
+        },
+        {
+          "key": "Aged vinegar",
+          "sourceAmount": "1 spoonful"
+        }
+      ],
+      "nameKo": "북방식 참깨 발효두부 소스",
+      "sourceNote": "A particular home recipe; salty fermented components vary by brand.",
+      "recipeStatus": "source_community_recipe"
+    },
+    {
+      "id": "cn-shacha-seafood-juice",
+      "researchId": "cn-shacha-seafood-juice",
+      "name": "Shacha Seafood-Soy Dip",
+      "nameKo": "사차 해산물 간장 소스",
+      "description": "A regional Chinese-inspired dipping sauce with soy sauce, oyster sauce and steamed-fish soy sauce.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://www.xiachufang.com/recipe/107023619/",
+      "sourceTitle": "家庭火锅准备全实录（含油碟、麻酱碟、沙茶酱碟配方）",
+      "sourceNote": "Source makes a separate seafood-soy mix, then adds shacha by serving; preserve method in production.",
+      "tags": [
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 1,
+        "richness": 4,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-shacha-seafood-juice.webp",
+        "alt": "AI-generated visual interpretation of Shacha Seafood-Soy Dip dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1 source spoonful"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "0.5 spoonful"
+        },
+        {
+          "key": "Seafood soy sauce",
+          "displayName": "Steamed-fish soy sauce",
+          "sourceAmount": "1/3 spoonful"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "2 spoonfuls"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Sesame seeds",
+          "sourceAmount": "1 spoonful"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "0.5 spoonful per small serving of mixed sauce"
+        }
+      ]
+    },
+    {
+      "id": "cn-dry-chili-dip",
+      "researchId": "cn-dry-chili-dip",
+      "name": "Chinese Dry Chili Dip",
+      "nameKo": "중국식 건식 고추 소스",
+      "description": "A regional Chinese-inspired dipping sauce with chili powder, toasted sesame and crushed peanuts.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_ingredients_only",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107144379/",
+      "sourceTitle": "火锅蘸料的做法",
+      "sourceNote": "Dry powder dip, not liquid sauce; source lists ingredients without exact ratio.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 9,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-dry-chili-dip.webp",
+        "alt": "AI-generated visual interpretation of Chinese Dry Chili Dip dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Chili powder",
+          "displayName": "Chili powder",
+          "sourceAmount": "quantity not specified"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Toasted sesame",
+          "sourceAmount": "quantity not specified"
+        },
+        {
+          "key": "Crushed peanuts",
+          "displayName": "Crushed peanuts",
+          "sourceAmount": "quantity not specified"
+        },
+        {
+          "key": "Salt",
+          "displayName": "Salt",
+          "sourceAmount": "quantity not specified"
+        },
+        {
+          "key": "MSG",
+          "displayName": "MSG",
+          "sourceAmount": "quantity not specified"
+        }
+      ]
+    },
+    {
+      "id": "cn-lau-shacha-soy",
+      "researchId": "cn-lau-shacha-soy",
+      "name": "Chef Lau's Shacha-Soy Sauce",
+      "nameKo": "라우 셰프 사차 간장 소스",
+      "description": "A chef-authored Chinese dipping sauce with light soy sauce, shacha sauce and olive oil.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Chef-authored variation",
+      "recipeStatus": "source_chef_authored",
+      "sourceUrl": "https://www.madewithlau.com/recipes/ultimate-guide-to-hot-pot",
+      "sourceTitle": "Dad's Hot Pot at Home: A Chinese Chef's Secrets",
+      "sourceNote": "Large, concentrated savory batch. Do not display as a single-serving recipe.",
+      "tags": [
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 2,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-lau-shacha-soy.webp",
+        "alt": "AI-generated visual interpretation of Chef Lau's Shacha-Soy Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "4 tbsp"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Olive oil",
+          "displayName": "Olive oil",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "1/2 tbsp"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "4 tbsp"
+        },
+        {
+          "key": "Salt",
+          "displayName": "Salt",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chicken bouillon",
+          "displayName": "Chicken bouillon",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Boiled water",
+          "sourceAmount": "4 tbsp"
+        }
+      ]
+    },
+    {
+      "id": "community-furu-chili",
+      "researchId": "community-furu-chili",
+      "name": "Fermented Tofu Sesame-Chili",
+      "nameKo": "발효두부 참깨 칠리 소스",
+      "description": "A community-shared dipping sauce variation with fermented tofu, sesame paste and chili oil.",
+      "region": "COMMUNITY MIX",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_ingredients_only",
+      "sourceUrl": "https://www.reddit.com/r/asianeats/comments/1ha080r/favorite_hot_pot_dipping_sauce_recipes/",
+      "sourceTitle": "Favorite hot pot dipping sauce recipes?",
+      "sourceNote": "Reported by a Reddit contributor; no precise measurements.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 5,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/community-furu-chili.webp",
+        "alt": "AI-generated visual interpretation of Fermented Tofu Sesame-Chili dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Fermented tofu",
+          "displayName": "Fermented tofu",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame paste",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Black vinegar",
+          "displayName": "Black vinegar",
+          "sourceAmount": "dash"
+        }
+      ]
+    },
+    {
+      "id": "community-sesame-shacha-ratio",
+      "researchId": "community-sesame-shacha-ratio",
+      "name": "Two-Thirds Sesame, One-Third Shacha",
+      "nameKo": "참깨 2 사차 1 비율 소스",
+      "description": "A community-shared dipping sauce variation with sesame paste, thinned with water, shacha sauce and scallion.",
+      "region": "COMMUNITY MIX",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_ratio",
+      "sourceUrl": "https://www.reddit.com/r/asianeats/comments/1ha080r/favorite_hot_pot_dipping_sauce_recipes/",
+      "sourceTitle": "Favorite hot pot dipping sauce recipes?",
+      "sourceNote": "Community-suggested 2:1 sesame-to-shacha base ratio.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 2,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/community-sesame-shacha-ratio.webp",
+        "alt": "AI-generated visual interpretation of Two-Thirds Sesame, One-Third Shacha dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame paste, thinned with water",
+          "sourceAmount": "2 parts"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 part"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Vinegar",
+          "sourceAmount": "optional"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "optional"
+        }
+      ]
+    },
+    {
+      "id": "community-fish-lime-chili",
+      "researchId": "community-fish-lime-chili",
+      "name": "Fish Sauce Lime Chili",
+      "nameKo": "피시소스 라임 고추 소스",
+      "description": "A community-shared dipping sauce variation with soy sauce, fish sauce and raw garlic.",
+      "region": "COMMUNITY MIX",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_ingredients_only",
+      "sourceUrl": "https://www.reddit.com/r/asianeats/comments/1ha080r/favorite_hot_pot_dipping_sauce_recipes/",
+      "sourceTitle": "Favorite hot pot dipping sauce recipes?",
+      "sourceNote": "Community combination, more Southeast Asian in flavor than classic northern Chinese sesame styles.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/community-fish-lime-chili.webp",
+        "alt": "AI-generated visual interpretation of Fish Sauce Lime Chili dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Fish sauce",
+          "displayName": "Fish sauce",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Raw garlic",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Lemon juice",
+          "displayName": "Lemon juice",
+          "sourceAmount": "squeeze"
+        },
+        {
+          "key": "Sambal",
+          "displayName": "Sambal",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Jalapeño slices",
+          "displayName": "Jalapeño slices",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "yuzu-sesame",
+      "image": {
+        "src": "/images/sauces/yuzu-sesame.webp",
+        "alt": "AI-generated visual interpretation of Yuzu Sesame Bright dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "original-yuzu-sesame",
+      "name": "Yuzu Sesame Bright",
+      "description": "Mellow sesame lifted by an unexpected citrus sparkle.",
+      "region": "EXPERIMENTAL",
+      "provenance": "Original idea · untested",
+      "sourceUrl": null,
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Tangy"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Lemon / yuzu",
+          "sourceAmount": "1 tsp juice"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "sourceAmount": "2 tsp, warm"
+        },
+        {
+          "key": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ],
+      "nameKo": "유자 참깨 상큼 소스",
+      "sourceNote": "Unverified idea: loosen nutty richness with citrus for fatty meat or tofu. Start with less citrus if using tart lemon.",
+      "recipeStatus": "original_untested"
+    },
+    {
+      "id": "vinegar-crunch",
+      "image": {
+        "src": "/images/sauces/vinegar-crunch.webp",
+        "alt": "AI-generated visual interpretation of Black Vinegar Chili Crunch dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "original-vinegar-chili-crunch",
+      "name": "Black Vinegar Chili Crunch",
+      "description": "Bright black vinegar cuts through crispy chili oil for a sharp, lively dip.",
+      "region": "EXPERIMENTAL",
+      "provenance": "Original idea · untested",
+      "sourceUrl": null,
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 3,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Black vinegar",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Chili crisp",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sesame seeds",
+          "sourceAmount": "1 tsp, toasted"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "sourceAmount": "1 tsp"
+        }
+      ],
+      "nameKo": "흑식초 칠리 크런치",
+      "sourceNote": "Unverified idea: vinegar cuts chili crisp's oil; omit extra salt because chili crisp may already be salty.",
+      "recipeStatus": "original_untested"
+    },
+    {
+      "id": "original-mushroom-shacha",
+      "researchId": "original-mushroom-shacha",
+      "name": "Roasted Mushroom Shacha",
+      "nameKo": "버섯 사차 감칠 소스",
+      "description": "An experimental Flavor Atlas combination with shacha sauce, mushroom sauce and light soy sauce.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified idea: mushroom amplifies shacha savoriness; keep soy modest to avoid excessive salt.",
+      "tags": [
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 2,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-mushroom-shacha.webp",
+        "alt": "AI-generated visual interpretation of Roasted Mushroom Shacha dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Mushroom sauce",
+          "displayName": "Mushroom sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-gochujang-peanut",
+      "researchId": "original-gochujang-peanut",
+      "name": "Gochujang Peanut Lime",
+      "nameKo": "고추장 땅콩 라임 소스",
+      "description": "An experimental Flavor Atlas combination with unsweetened peanut sauce, gochujang and lime juice.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified Korean-fusion idea, not a claimed traditional or celebrity recipe; gochujang sweetness varies by brand.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-gochujang-peanut.webp",
+        "alt": "AI-generated visual interpretation of Gochujang Peanut Lime dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Unsweetened peanut sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Gochujang",
+          "displayName": "Gochujang",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-lime-herb-clear",
+      "researchId": "original-lime-herb-clear",
+      "name": "Lime Herb Clear",
+      "nameKo": "라임 고수 맑은 소스",
+      "description": "An experimental Flavor Atlas combination with light soy sauce, lime juice and cilantro.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified idea emphasizing freshness with minimal oil and garlic.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-lime-herb-clear.webp",
+        "alt": "AI-generated visual interpretation of Lime Herb Clear dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Minced Thai chili",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-peanut-sichuan-pepper",
+      "researchId": "original-peanut-sichuan-pepper",
+      "name": "Peanut Sichuan Pepper",
+      "nameKo": "땅콩 산초 마라 소스",
+      "description": "An experimental Flavor Atlas combination with unsweetened peanut sauce, chili oil and sichuan pepper oil.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified idea pairing creamy peanuts with chili and mild numbing sensation. Sichuan pepper oil varies significantly in potency.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-peanut-sichuan-pepper.webp",
+        "alt": "AI-generated visual interpretation of Peanut Sichuan Pepper dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Unsweetened peanut sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sichuan pepper oil",
+          "displayName": "Sichuan pepper oil",
+          "sourceAmount": "2 drops, then adjust"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "miso-ginger",
+      "image": {
+        "src": "/images/sauces/miso-ginger.webp",
+        "alt": "AI-generated visual interpretation of Miso Sesame Ginger dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "original-miso-sesame-ginger",
+      "name": "Miso Sesame Ginger",
+      "description": "A gentle and cozy miso-sesame base with a little ginger zing.",
+      "region": "EXPERIMENTAL",
+      "provenance": "Original idea · untested",
+      "sourceUrl": null,
+      "tags": [
+        "Nutty",
+        "Savory",
+        "Creamy",
+        "Tangy"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 7,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Miso",
+          "sourceAmount": "1 tsp, white"
+        },
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Ginger",
+          "sourceAmount": "1/2 tsp, grated"
+        },
+        {
+          "key": "Rice vinegar",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "sourceAmount": "1 tbsp, warm"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ],
+      "nameKo": "미소 참깨 생강 소스",
+      "sourceNote": "Unverified Japanese-inspired fusion idea; no added soy to avoid stacking salty fermented bases.",
+      "recipeStatus": "original_untested"
+    },
+    {
+      "id": "original-seaweed-ponzu",
+      "researchId": "original-seaweed-ponzu",
+      "name": "Seaweed Ponzu",
+      "nameKo": "김 폰즈 소스",
+      "description": "An experimental Flavor Atlas combination with ponzu, crumbled roasted nori and grated ginger.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified idea for mushrooms, tofu, and seafood; roasted nori softens quickly, add immediately before serving.",
+      "tags": [
+        "Nutty",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-seaweed-ponzu.webp",
+        "alt": "AI-generated visual interpretation of Seaweed Ponzu dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Ponzu",
+          "displayName": "Ponzu",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Crumbled roasted nori",
+          "displayName": "Crumbled roasted nori",
+          "sourceAmount": "1/2 sheet"
+        },
+        {
+          "key": "Ginger",
+          "displayName": "Grated ginger",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Sesame seeds",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-tomato-chili",
+      "researchId": "original-tomato-chili",
+      "name": "Tomato Chili Tang",
+      "nameKo": "토마토 칠리 새콤 소스",
+      "description": "An experimental Flavor Atlas combination with unsweetened tomato sauce, chili oil and chinese black vinegar.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified experimental tomato-forward dip, especially for beef; may not be available at standard sauce bars.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 5,
+        "richness": 3,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-tomato-chili.webp",
+        "alt": "AI-generated visual interpretation of Tomato Chili Tang dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Unsweetened tomato sauce",
+          "displayName": "Unsweetened tomato sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Black vinegar",
+          "displayName": "Chinese black vinegar",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-toasted-scallion-sesame",
+      "researchId": "original-toasted-scallion-sesame",
+      "name": "Toasted Scallion Sesame",
+      "nameKo": "구운 파 참깨 소스",
+      "description": "An experimental Flavor Atlas combination with chinese sesame paste, scallion oil and light soy sauce.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified idea built around toasted onion aroma with restrained acidity; requires prepared scallion oil.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-toasted-scallion-sesame.webp",
+        "alt": "AI-generated visual interpretation of Toasted Scallion Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Chinese sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Scallion oil",
+          "displayName": "Scallion oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Rice vinegar",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Toasted sesame seeds",
+          "sourceAmount": "1/2 tsp"
+        }
+      ]
+    },
+    {
+      "id": "kr-geonhee-original-2024",
+      "researchId": "kr-geonhee-original-2024",
+      "name": "Geonhee Sauce (2024 Version)",
+      "nameKo": "건희소스 2024",
+      "description": "A Korean-style hot pot combination with peanut sauce, chili sauce and minced garlic.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_transcript_reported",
+      "sourceUrl": "https://lilys.ai/ko/notes/607535",
+      "sourceTitle": "Hal Myeong Su ep.176 — transcript of hot-pot sauce segment",
+      "sourceNote": "Attribution from third-party transcript of Hal Myeong Su ep.176; distinct from the 2025 Geonhee sauce entry.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 7,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-geonhee-original-2024.webp",
+        "alt": "AI-generated visual interpretation of Geonhee Sauce (2024 Version) dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "1 source spoon"
+        },
+        {
+          "key": "Chili sauce",
+          "displayName": "Chili sauce",
+          "sourceAmount": "2.5 spoons"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Sesame seeds",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Peanut powder",
+          "displayName": "Peanut powder",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chili powder",
+          "displayName": "Chili powder",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "0.3 tsp"
+        },
+        {
+          "key": "Stir-fried beef paste",
+          "displayName": "Stir-fried beef paste",
+          "sourceAmount": "0.5 tsp"
+        }
+      ]
+    },
+    {
+      "id": "fire",
+      "image": {
+        "src": "/images/sauces/fire.webp",
+        "alt": "AI-generated visual interpretation of Youngji's 3-3-3 Fire Dip dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "kr-youngji-fire-2024",
+      "name": "Youngji’s 3–3–3 Fire Dip",
+      "description": "A minimal, fiery combination of sweet chili, Korean chili powder and fresh chilies.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Secondary transcript; verify amounts",
+      "sourceUrl": "https://lilys.ai/ko/notes/607535",
+      "tags": [
+        "Spicy"
+      ],
+      "tasteEstimate": {
+        "heat": 10,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Sweet chili sauce",
+          "sourceAmount": "3 source spoonfuls"
+        },
+        {
+          "key": "Chili powder",
+          "sourceAmount": "3 source spoonfuls"
+        },
+        {
+          "key": "Thai chili",
+          "sourceAmount": "3 source spoonfuls, chopped"
+        }
+      ],
+      "nameKo": "이영지 333 소스",
+      "sourceNote": "Very chili-forward and likely exceptionally hot; use a small tasting amount first. Video-transcript attribution, not an independently tested ratio.",
+      "recipeStatus": "source_transcript_reported"
+    },
+    {
+      "id": "kr-chenle-soy-herb",
+      "researchId": "kr-chenle-soy-herb",
+      "name": "Chenle Soy-Garlic Herb",
+      "nameKo": "천러 소스",
+      "description": "A Korean-style hot pot combination with soy sauce, minced garlic and chopped onion.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_transcript_reported",
+      "sourceUrl": "https://lilys.ai/ko/notes/607535",
+      "sourceTitle": "Hal Myeong Su ep.176 — transcript of hot-pot sauce segment",
+      "sourceNote": "Associated with NCT's Chenle in Hal Myeong Su's sauce tasting; source does not standardize the sesame oil drizzle.",
+      "tags": [
+        "Nutty",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 3,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-chenle-soy-herb.webp",
+        "alt": "AI-generated visual interpretation of Chenle Soy-Garlic Herb dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1.5 source spoons"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Onion",
+          "displayName": "Chopped onion",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "one circular drizzle"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "kr-renjun-fermented-sesame",
+      "researchId": "kr-renjun-fermented-sesame",
+      "name": "Renjun Fermented Sesame",
+      "nameKo": "런쥔 소스",
+      "description": "A Korean-style hot pot combination with sesame sauce, scallion and fermented chive-flower sauce.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_transcript_reported",
+      "sourceUrl": "https://lilys.ai/ko/notes/607535",
+      "sourceTitle": "Hal Myeong Su ep.176 — transcript of hot-pot sauce segment",
+      "sourceNote": "Reported as NCT Renjun's blend; fermented chive-flower sauce and fermented tofu contribute substantial salt.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-renjun-fermented-sesame.webp",
+        "alt": "AI-generated visual interpretation of Renjun Fermented Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame sauce",
+          "sourceAmount": "2 source spoons"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "a little"
+        },
+        {
+          "key": "Chive-flower sauce",
+          "displayName": "Fermented chive-flower sauce",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Fermented tofu",
+          "displayName": "Fermented tofu",
+          "sourceAmount": "0.5 spoon"
+        }
+      ]
+    },
+    {
+      "id": "kr-youngji-peanut-2025",
+      "researchId": "kr-youngji-peanut-2025",
+      "name": "Youngji Sweet-Spicy Peanut (2025)",
+      "nameKo": "이영지 땅콩 소스 2025",
+      "description": "A Korean-style hot pot combination with peanut sauce, sweet chili sauce and thai chilies.",
+      "region": "KOREAN-STYLE",
+      "provenance": "Source-reported variation",
+      "recipeStatus": "source_reported",
+      "sourceUrl": "https://m.news.nate.com/view/20250516n24650",
+      "sourceTitle": "이영지 하이디라오 소스 레시피 소개",
+      "sourceNote": "Entertainment-report version; dramatically different proportions from the 3–3–3 Youngji sauce above. Ladles are not standard tablespoons.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 9,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/kr-youngji-peanut-2025.webp",
+        "alt": "AI-generated visual interpretation of Youngji Sweet-Spicy Peanut (2025) dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "2 source ladles"
+        },
+        {
+          "key": "Sweet chili sauce",
+          "displayName": "Sweet chili sauce",
+          "sourceAmount": "1.5 source ladles"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chilies",
+          "sourceAmount": "2 spoons"
+        },
+        {
+          "key": "Chili powder",
+          "displayName": "Chili powder",
+          "sourceAmount": "1.5 spoons"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "2 circular drizzles"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1 circular drizzle"
+        },
+        {
+          "key": "Minced meat topping",
+          "displayName": "Minced meat topping",
+          "sourceAmount": "1.5 spoons"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Sesame seeds",
+          "sourceAmount": "unspecified"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Peanut powder",
+          "displayName": "Peanut powder",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-sesame-oil-crunch",
+      "researchId": "cn-2015-sesame-oil-crunch",
+      "name": "Sesame-Oil Peanut Crunch",
+      "nameKo": "참기름 땅콩 크런치",
+      "description": "A regional Chinese-inspired dipping sauce with sesame oil, sesame paste and crushed peanuts.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "Source spoon-to-gram conversions are internally inconsistent; only original spoon labels are retained.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 3,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-sesame-oil-crunch.webp",
+        "alt": "AI-generated visual interpretation of Sesame-Oil Peanut Crunch dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "2 source tsp"
+        },
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Crushed peanuts",
+          "displayName": "Crushed peanuts",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Salt",
+          "displayName": "Salt",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "MSG",
+          "displayName": "MSG",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-sweet-sour-wasabi",
+      "researchId": "cn-2015-sweet-sour-wasabi",
+      "name": "Sweet-Sour Wasabi Cilantro",
+      "nameKo": "새콤달콤 와사비 고수",
+      "description": "A regional Chinese-inspired dipping sauce with cooking wine, light soy sauce and vinegar.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "Source gives the base as a 1:2:3:4:5 spoon ratio. This formula is significantly sweeter than a usual soy dip.",
+      "tags": [
+        "Tangy",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 3,
+        "richness": 0,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-sweet-sour-wasabi.webp",
+        "alt": "AI-generated visual interpretation of Sweet-Sour Wasabi Cilantro dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Cooking wine",
+          "displayName": "Cooking wine",
+          "sourceAmount": "1 part"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "2 parts"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "3 parts"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Vinegar",
+          "sourceAmount": "4 parts"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "5 parts"
+        },
+        {
+          "key": "Wasabi/horseradish",
+          "displayName": "Wasabi/horseradish",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-dried-shrimp-peanut",
+      "researchId": "cn-2015-dried-shrimp-peanut",
+      "name": "Dried-Shrimp Peanut Soy",
+      "nameKo": "건새우 땅콩 간장",
+      "description": "A regional Chinese-inspired dipping sauce with peanut paste, seafood soy sauce and minced garlic.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "Requires dried shrimp; seafood allergy relevant. Salt may be unnecessary depending on seafood soy.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-dried-shrimp-peanut.webp",
+        "alt": "AI-generated visual interpretation of Dried-Shrimp Peanut Soy dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut paste",
+          "sourceAmount": "2 source tsp"
+        },
+        {
+          "key": "Seafood soy sauce",
+          "displayName": "Seafood soy sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Dried shrimp",
+          "displayName": "Dried shrimp",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Crushed peanuts",
+          "displayName": "Fried peanuts",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Salt",
+          "displayName": "Salt",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "MSG",
+          "displayName": "MSG",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-chive-furu-sesame",
+      "researchId": "cn-2015-chive-furu-sesame",
+      "name": "Chive Blossom Fermented Sesame",
+      "nameKo": "부추꽃 발효두부 참깨",
+      "description": "A regional Chinese-inspired dipping sauce with sesame paste, fermented tofu and minced garlic.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "A stronger sesame-and-fermented version than the earlier two-person northern sesame bowl.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 10,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-chive-furu-sesame.webp",
+        "alt": "AI-generated visual interpretation of Chive Blossom Fermented Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame paste",
+          "sourceAmount": "4 source tsp"
+        },
+        {
+          "key": "Fermented tofu",
+          "displayName": "Fermented tofu",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Chive-flower sauce",
+          "displayName": "Fermented chive-flower paste",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "MSG",
+          "displayName": "MSG",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-sichuan-pepper-chili-oil",
+      "researchId": "cn-2015-sichuan-pepper-chili-oil",
+      "name": "Sichuan Pepper Chili-Oil",
+      "nameKo": "화자오 고추기름 소스",
+      "description": "A regional Chinese-inspired dipping sauce with chili oil, ground sichuan pepper and thai chili.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "Numbing flavor comes from Sichuan pepper; adjust carefully because source quantity is substantial.",
+      "tags": [
+        "Spicy",
+        "Nutty"
+      ],
+      "tasteEstimate": {
+        "heat": 9,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-sichuan-pepper-chili-oil.webp",
+        "alt": "AI-generated visual interpretation of Sichuan Pepper Chili-Oil dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "4 source tsp"
+        },
+        {
+          "key": "Sichuan pepper",
+          "displayName": "Ground Sichuan pepper",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chili",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Salt",
+          "displayName": "Salt",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "MSG",
+          "displayName": "MSG",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "to taste"
+        }
+      ]
+    },
+    {
+      "id": "cn-2015-shacha-pickled-mustard",
+      "researchId": "cn-2015-shacha-pickled-mustard",
+      "name": "Shacha with Pickled Mustard",
+      "nameKo": "사차 자차이 소스",
+      "description": "A regional Chinese-inspired dipping sauce with shacha sauce, green mountain-pepper chili sauce (山椒酱) and minced garlic.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_compilation",
+      "sourceUrl": "https://m.xiachufang.com/recipe/100550798/",
+      "sourceTitle": "6种超好吃的火锅蘸料",
+      "sourceNote": "Source uses 山椒酱, a specialty pepper sauce; do not automatically substitute Japanese sansho powder.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2015-shacha-pickled-mustard.webp",
+        "alt": "AI-generated visual interpretation of Shacha with Pickled Mustard dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "2 source tbsp"
+        },
+        {
+          "key": "Green mountain-pepper chili sauce (山椒酱)",
+          "displayName": "Green mountain-pepper chili sauce (山椒酱)",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Minced zha cai (pickled mustard stem)",
+          "displayName": "Minced zha cai (pickled mustard stem)",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "cn-2023-tomyum-herb-lime",
+      "researchId": "cn-2023-tomyum-herb-lime",
+      "name": "Tom Yum Lime Herb",
+      "nameKo": "똠얌 라임 허브 소스",
+      "description": "A regional Chinese-inspired dipping sauce with garlic, cilantro roots and shallots.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "sourceTitle": "6款火锅蘸料",
+      "sourceNote": "Community formula intended for tom yum or tomato hot pot. Blend all ingredients; do not claim this as canonical Thai nam jim.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 8,
+        "richness": 0,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2023-tomyum-herb-lime.webp",
+        "alt": "AI-generated visual interpretation of Tom Yum Lime Herb dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Garlic",
+          "displayName": "Garlic",
+          "sourceAmount": "5 cloves"
+        },
+        {
+          "key": "Cilantro roots",
+          "displayName": "Cilantro roots",
+          "sourceAmount": "3"
+        },
+        {
+          "key": "Shallots",
+          "displayName": "Shallots",
+          "sourceAmount": "2"
+        },
+        {
+          "key": "Fresh chili",
+          "displayName": "Red chili",
+          "sourceAmount": "1"
+        },
+        {
+          "key": "Fresh chili",
+          "displayName": "Green chilies",
+          "sourceAmount": "2"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chilies",
+          "sourceAmount": "2"
+        },
+        {
+          "key": "Fish sauce",
+          "displayName": "Fish sauce",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "10 g"
+        }
+      ]
+    },
+    {
+      "id": "beef-shacha",
+      "image": {
+        "src": "/images/sauces/beef-shacha.webp",
+        "alt": "AI-generated visual interpretation of Beef Shacha Peanut Herb dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "cn-2023-beef-shacha-peanut",
+      "name": "Beef Shacha Peanut Herb",
+      "description": "A bold, hearty peanut-shacha sauce with plenty of fresh aromatics.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Savory",
+        "Creamy",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 5,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Garlic",
+          "sourceAmount": "15 g, minced",
+          "spoonEstimate": "≈ 2 tbsp minced"
+        },
+        {
+          "key": "Cilantro",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 15 tbsp loosely chopped"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 4 tbsp sliced"
+        },
+        {
+          "key": "Thai chili",
+          "sourceAmount": "5 g",
+          "spoonEstimate": "≈ 1½ tsp chopped"
+        },
+        {
+          "key": "Shacha sauce",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 1 tbsp"
+        },
+        {
+          "key": "Peanut sauce",
+          "sourceAmount": "15 g, peanut paste",
+          "spoonEstimate": "≈ 1 tbsp peanut paste"
+        },
+        {
+          "key": "Oyster sauce",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 1 tbsp"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 1 tbsp"
+        }
+      ],
+      "nameKo": "소고기 사차 땅콩 허브",
+      "sourceNote": "Designed for beef and clear-broth hot pot. Sauce amounts are grams in original source.",
+      "recipeStatus": "source_community_recipe"
+    },
+    {
+      "id": "cn-2023-northern-spice-water-sesame",
+      "researchId": "cn-2023-northern-spice-water-sesame",
+      "name": "Spice-Water Lamb Sesame",
+      "nameKo": "향신수 양고기 참깨 소스",
+      "description": "A regional Chinese-inspired dipping sauce with sesame paste, peanut paste and cilantro.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "sourceTitle": "6款火锅蘸料",
+      "sourceNote": "Source suggests lamb or clear-broth hot pot. Prepare and cool the aromatic spice water before mixing.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 2,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2023-northern-spice-water-sesame.webp",
+        "alt": "AI-generated visual interpretation of Spice-Water Lamb Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Sesame paste",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut paste",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "15 g"
+        },
+        {
+          "key": "Water infused with star anise, bay leaf, Sichuan pepper",
+          "displayName": "Water infused with star anise, bay leaf, Sichuan pepper",
+          "sourceAmount": "100 ml"
+        },
+        {
+          "key": "Fermented tofu",
+          "displayName": "Fermented tofu sauce",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Chive-flower sauce",
+          "displayName": "Fermented chive-flower paste",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "5 g"
+        }
+      ]
+    },
+    {
+      "id": "cn-2023-roasted-shrimp-lime",
+      "researchId": "cn-2023-roasted-shrimp-lime",
+      "name": "Roasted Shrimp Paste Lime",
+      "nameKo": "구운 새우장 라임 소스",
+      "description": "A regional Chinese-inspired dipping sauce with garlic, cilantro and thai chilies.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "sourceTitle": "6款火锅蘸料",
+      "sourceNote": "Blend all ingredients. Contains crustacean products in shrimp paste; strong, pungent flavor.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 8,
+        "richness": 2,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2023-roasted-shrimp-lime.webp",
+        "alt": "AI-generated visual interpretation of Roasted Shrimp Paste Lime dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Garlic",
+          "displayName": "Garlic",
+          "sourceAmount": "4 cloves"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "2 sprigs"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chilies",
+          "sourceAmount": "3"
+        },
+        {
+          "key": "Fish sauce",
+          "displayName": "Fish sauce",
+          "sourceAmount": "15 g"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "10 g"
+        },
+        {
+          "key": "Roasted shrimp paste",
+          "displayName": "Roasted shrimp paste",
+          "sourceAmount": "15 g"
+        }
+      ]
+    },
+    {
+      "id": "cn-2023-tamarind-toasted-rice",
+      "researchId": "cn-2023-tamarind-toasted-rice",
+      "name": "Tamarind Toasted-Rice Chili",
+      "nameKo": "타마린드 볶음찹쌀 칠리",
+      "description": "A regional Chinese-inspired dipping sauce with lime juice, fish sauce and tamarind paste.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "sourceTitle": "6款火锅蘸料",
+      "sourceNote": "Community Thai-inspired sauce proposed for seafood and clear broth; toasted rice brings grainy texture.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 9,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-2023-tamarind-toasted-rice.webp",
+        "alt": "AI-generated visual interpretation of Tamarind Toasted-Rice Chili dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Fish sauce",
+          "displayName": "Fish sauce",
+          "sourceAmount": "30 g"
+        },
+        {
+          "key": "Tamarind paste",
+          "displayName": "Tamarind paste",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Thai chili powder",
+          "displayName": "Thai chili powder",
+          "sourceAmount": "15 g"
+        },
+        {
+          "key": "Toasted sticky-rice powder",
+          "displayName": "Toasted sticky-rice powder",
+          "sourceAmount": "5 g"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "15 g"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "5 g"
+        }
+      ]
+    },
+    {
+      "id": "hainan",
+      "image": {
+        "src": "/images/sauces/hainan.webp",
+        "alt": "AI-generated visual interpretation of Hainan Sand Ginger Citrus dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "cn-2023-hainan-sand-ginger",
+      "name": "Hainan Sand Ginger Citrus",
+      "description": "A fragrant, punchy sauce with vivid lime and sand ginger.",
+      "region": "HAINANESE-STYLE",
+      "provenance": "Community recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107243441/",
+      "tags": [
+        "Tangy",
+        "Fresh",
+        "Spicy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 0,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Garlic",
+          "sourceAmount": "15 g, minced",
+          "spoonEstimate": "≈ 2 tbsp minced"
+        },
+        {
+          "key": "Sand ginger",
+          "sourceAmount": "15 g paste",
+          "spoonEstimate": "≈ 1 tbsp paste"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "15 g",
+          "spoonEstimate": "≈ 4 tbsp sliced"
+        },
+        {
+          "key": "Thai chili",
+          "sourceAmount": "5 g, chopped",
+          "spoonEstimate": "≈ 1½ tsp chopped"
+        },
+        {
+          "key": "Lime",
+          "sourceAmount": "4 small Hainan limes"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "30 g, reduced-salt",
+          "spoonEstimate": "≈ 2 tbsp reduced-salt"
+        },
+        {
+          "key": "Sugar",
+          "sourceAmount": "5 g",
+          "spoonEstimate": "≈ 1¼ tsp"
+        }
+      ],
+      "nameKo": "하이난 샤장 시트러스",
+      "sourceNote": "Designed for coconut-chicken hot pot. Sand ginger (沙姜, kaempferia galanga) is not the same as common ginger.",
+      "recipeStatus": "source_community_recipe"
+    },
+    {
+      "id": "goma-dare",
+      "image": {
+        "src": "/images/sauces/goma-dare.webp",
+        "alt": "AI-generated visual interpretation of Japanese Goma Dare dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "jp-joc-goma-dare",
+      "name": "Japanese Goma Dare",
+      "description": "Silky sesame and concentrated dashi, balanced with vinegar and soy.",
+      "region": "JAPANESE",
+      "provenance": "Published recipe",
+      "sourceUrl": "https://www.justonecookbook.com/how-to-make-sesame-sauce-goma-dare/",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "sourceAmount": "3 tbsp thick Japanese white sesame paste"
+        },
+        {
+          "key": "Sugar",
+          "sourceAmount": "4 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Rice vinegar",
+          "sourceAmount": "4 tsp, unseasoned"
+        },
+        {
+          "key": "Dashi",
+          "sourceAmount": "2 tbsp, concentrated"
+        },
+        {
+          "key": "Salt",
+          "sourceAmount": "1/8 tsp, to taste"
+        }
+      ],
+      "nameKo": "일본식 다시 참깨 소스",
+      "sourceNote": "Author's current published formula. Mix sesame paste and sugar, then soy/vinegar, and slowly stir in dashi. Dashi may contain bonito (fish).",
+      "recipeStatus": "source_cook_authored"
+    },
+    {
+      "id": "jp-recipetin-miso-sesame",
+      "researchId": "jp-recipetin-miso-sesame",
+      "name": "Japanese Miso-Seed Sesame",
+      "nameKo": "미소 볶은참깨 소스",
+      "description": "A Japanese shabu-shabu dipping sauce with roasted white sesame seeds, ground, white miso and soy sauce.",
+      "region": "JAPANESE-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://japan.recipetineats.com/shabu-shabu-hotpot/",
+      "sourceTitle": "Shabu-shabu Hotpot",
+      "sourceNote": "Uses ground seeds and miso rather than sesame paste. Source recipe also serves ponzu separately.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 7,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/jp-recipetin-miso-sesame.webp",
+        "alt": "AI-generated visual interpretation of Japanese Miso-Seed Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Ground sesame",
+          "displayName": "Roasted white sesame seeds, ground",
+          "sourceAmount": "2.5 tbsp"
+        },
+        {
+          "key": "Miso",
+          "displayName": "White miso",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Kombu dashi",
+          "displayName": "Kombu dashi",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "1/4 tbsp"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Vinegar",
+          "sourceAmount": "1/4 tbsp"
+        }
+      ]
+    },
+    {
+      "id": "jp-joc-homemade-ponzu",
+      "researchId": "jp-joc-homemade-ponzu",
+      "name": "Homemade Citrus-Kombu Ponzu",
+      "nameKo": "유자풍 다시 폰즈",
+      "description": "A Japanese shabu-shabu dipping sauce with kombu, bonito flakes and soy sauce.",
+      "region": "JAPANESE-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://www.justonecookbook.com/ponzu-sauce/",
+      "sourceTitle": "Ponzu Sauce Recipe",
+      "sourceNote": "Make-ahead sauce, NOT instant sauce-bar assembly. Combine, refrigerate overnight or longer, strain before serving; source offers shiitake swap for bonito.",
+      "tags": [
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 0,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/jp-joc-homemade-ponzu.webp",
+        "alt": "AI-generated visual interpretation of Homemade Citrus-Kombu Ponzu dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Kombu",
+          "displayName": "Kombu",
+          "sourceAmount": "1 piece (6 g)"
+        },
+        {
+          "key": "Bonito flakes",
+          "displayName": "Bonito flakes",
+          "sourceAmount": "1/2 packed cup"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1/2 cup"
+        },
+        {
+          "key": "Citrus juice (lemon plus a little orange/grapefruit)",
+          "displayName": "Citrus juice (lemon plus a little orange/grapefruit)",
+          "sourceAmount": "1/2 cup"
+        },
+        {
+          "key": "Nikiri mirin (cooked to remove alcohol)",
+          "displayName": "Nikiri mirin (cooked to remove alcohol)",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Finely grated zest",
+          "displayName": "Finely grated zest",
+          "sourceAmount": "1 lemon"
+        }
+      ]
+    },
+    {
+      "id": "th-nam-jim-suki-red-furu",
+      "researchId": "th-nam-jim-suki-red-furu",
+      "name": "Thai Suki Red-Fermented Tofu Sauce",
+      "nameKo": "태국 수키 발효두부 소스",
+      "description": "A Thai-style dipping sauce with red fermented tofu, red fermented tofu liquid and thai chilies.",
+      "region": "THAI-STYLE",
+      "provenance": "Cook-authored variation",
+      "recipeStatus": "source_cook_authored",
+      "sourceUrl": "https://hot-thai-kitchen.com/suki-nam/",
+      "sourceTitle": "Thai Sukiyaki Soup (Suki Nam) and Nam Jim Suki Sauce",
+      "sourceNote": "Make-ahead blended sauce. Source also suggests mixing prepared suki sauce with sriracha for extra heat; not a basic Chinese hot-pot sauce bar mix.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 5,
+        "richness": 4,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/th-nam-jim-suki-red-furu.webp",
+        "alt": "AI-generated visual interpretation of Thai Suki Red-Fermented Tofu Sauce dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Red fermented tofu",
+          "displayName": "Red fermented tofu",
+          "sourceAmount": "4 cubes"
+        },
+        {
+          "key": "Red fermented tofu liquid",
+          "displayName": "Red fermented tofu liquid",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chilies",
+          "sourceAmount": "around 2, or to taste"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Garlic",
+          "sourceAmount": "5 cloves"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "2 tbsp"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "White vinegar",
+          "sourceAmount": "1/4 cup"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Toasted sesame oil",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Sesame seeds",
+          "displayName": "Toasted white sesame seeds",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "1/4 cup"
+        }
+      ]
+    },
+    {
+      "id": "cn-hainan-coconut-2023",
+      "researchId": "cn-hainan-coconut-2023",
+      "name": "Hainan Coconut-Chicken Soy Lime",
+      "nameKo": "하이난 코코넛 치킨 간장 라임",
+      "description": "A regional Chinese-inspired dipping sauce with soy sauce, oyster sauce and sesame oil.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107042375/",
+      "sourceTitle": "椰子鸡蘸料（具体配比）",
+      "sourceNote": "Detailed personal ratio for coconut-chicken hot pot; 'spoon' sizes and water volume not standardized.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 2,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-hainan-coconut-2023.webp",
+        "alt": "AI-generated visual interpretation of Hainan Coconut-Chicken Soy Lime dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "3 source spoonfuls"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Garlic",
+          "sourceAmount": "1 clove"
+        },
+        {
+          "key": "Sand ginger",
+          "displayName": "Sand ginger",
+          "sourceAmount": "20 g"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Small green citrus",
+          "sourceAmount": "4"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "around 1 sprig"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 small stalk"
+        },
+        {
+          "key": "Thai chili",
+          "displayName": "Thai chili",
+          "sourceAmount": "1"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "to dilute"
+        }
+      ]
+    },
+    {
+      "id": "cn-hainan-coconut-light",
+      "researchId": "cn-hainan-coconut-light",
+      "name": "Hainan Kumquat Ginger Oil",
+      "nameKo": "하이난 금귤 생강오일",
+      "description": "A regional Chinese-inspired dipping sauce with soy sauce, minced garlic and chopped chilies.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/107210790/",
+      "sourceTitle": "海南特色蘸料（椰子鸡）",
+      "sourceNote": "Sauce-bar-like Hainan variation; the Chinese source uses 小金桔 (small citrus) and 沙姜, not an ordinary orange and ginger substitution.",
+      "tags": [
+        "Spicy",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 2,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/cn-hainan-coconut-light.webp",
+        "alt": "AI-generated visual interpretation of Hainan Kumquat Ginger Oil dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Soy sauce",
+          "displayName": "Soy sauce",
+          "sourceAmount": "1 source spoon"
+        },
+        {
+          "key": "Garlic",
+          "displayName": "Minced garlic",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Fresh chili",
+          "displayName": "Chopped chilies",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Small kumquat/lime",
+          "sourceAmount": "1"
+        },
+        {
+          "key": "Ginger oil",
+          "displayName": "Ginger oil",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Sand ginger",
+          "displayName": "Sand ginger",
+          "sourceAmount": "0.5 spoon"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "0.5 spoon"
+        }
+      ]
+    },
+    {
+      "id": "blackbean",
+      "image": {
+        "src": "/images/sauces/blackbean.webp",
+        "alt": "AI-generated visual interpretation of Lao Gan Ma Black-Bean Oil dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "researchId": "cn-laoganma-blackbean-oil",
+      "name": "Lao Gan Ma Black-Bean Oil",
+      "description": "Fragrant oils, salty fermented black beans and a lively chili finish.",
+      "region": "CHINESE-STYLE",
+      "provenance": "Community recipe",
+      "sourceUrl": "https://m.xiachufang.com/recipe/103804937/",
+      "tags": [
+        "Spicy",
+        "Savory",
+        "Tangy"
+      ],
+      "tasteEstimate": {
+        "heat": 7,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut oil",
+          "sourceAmount": "1 source spoon"
+        },
+        {
+          "key": "Sesame oil",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Lao Gan Ma",
+          "sourceAmount": "1 spoon, fermented black-bean chili"
+        },
+        {
+          "key": "Thai chili",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Soy sauce",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Fragrant vinegar",
+          "sourceAmount": "1 spoon"
+        },
+        {
+          "key": "Garlic",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Sesame seeds",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Scallion",
+          "sourceAmount": "to taste"
+        },
+        {
+          "key": "Cilantro",
+          "sourceAmount": "to taste"
+        }
+      ],
+      "nameKo": "라오간마 두시 기름장",
+      "sourceNote": "Specific user blend using prepared black-bean chili product. Peanut oil can be an allergy concern.",
+      "recipeStatus": "source_community_recipe"
+    },
+    {
+      "id": "community-red-furu-shacha",
+      "researchId": "community-red-furu-shacha",
+      "name": "Red Furu Shacha Sweet-Salty",
+      "nameKo": "붉은 발효두부 사차 소스",
+      "description": "A community-shared dipping sauce variation with peanut sauce, black vinegar and red fermented tofu.",
+      "region": "COMMUNITY MIX",
+      "provenance": "Community-reported variation",
+      "recipeStatus": "source_community_ratio",
+      "sourceUrl": "https://www.reddit.com/r/chinesefood/comments/1jl9iqi",
+      "sourceTitle": "Share me your go to hotpot dipping sauce recipe!",
+      "sourceNote": "Community contributor's sweet-salty fermented sauce; intensely savory and potentially high in sodium.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 4,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/community-red-furu-shacha.webp",
+        "alt": "AI-generated visual interpretation of Red Furu Shacha Sweet-Salty dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Peanut sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Black vinegar",
+          "displayName": "Black vinegar",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Red fermented tofu",
+          "displayName": "Red fermented tofu",
+          "sourceAmount": "around 2 small cubes"
+        },
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Chili sauce",
+          "displayName": "Chili-garlic sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sugar",
+          "displayName": "Sugar",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "a dash"
+        },
+        {
+          "key": "Oyster sauce",
+          "displayName": "Oyster sauce",
+          "sourceAmount": "a dash"
+        }
+      ]
+    },
+    {
+      "id": "original-black-sesame-wasabi",
+      "researchId": "original-black-sesame-wasabi",
+      "name": "Black Sesame Wasabi Ponzu",
+      "nameKo": "흑임자 와사비 폰즈",
+      "description": "An experimental Flavor Atlas combination with black sesame paste, ready-to-use ponzu and prepared wasabi.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Experimental Japanese-inspired fusion; wasabi heat fades rapidly, so add immediately before serving.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 3,
+        "richness": 6,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-black-sesame-wasabi.webp",
+        "alt": "AI-generated visual interpretation of Black Sesame Wasabi Ponzu dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Black sesame paste",
+          "displayName": "Black sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Ponzu",
+          "displayName": "Ready-to-use ponzu",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Prepared wasabi",
+          "displayName": "Prepared wasabi",
+          "sourceAmount": "1/8 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-sour-plum-shacha",
+      "researchId": "original-sour-plum-shacha",
+      "name": "Sour Plum Shacha",
+      "nameKo": "매실 사차 새콤 소스",
+      "description": "An experimental Flavor Atlas combination with shacha sauce, sour plum sauce and light soy sauce.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified sweet-sour-fishy contrast; sour plum sauces vary widely in salt and sweetness.",
+      "tags": [
+        "Nutty",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 2,
+        "richness": 4,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-sour-plum-shacha.webp",
+        "alt": "AI-generated visual interpretation of Sour Plum Shacha dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Shacha sauce",
+          "displayName": "Shacha sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Sour plum sauce",
+          "displayName": "Sour plum sauce",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Vinegar",
+          "displayName": "Rice vinegar",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-furu-chili-sesame",
+      "researchId": "original-furu-chili-sesame",
+      "name": "Furu Chili-Crisp Sesame",
+      "nameKo": "발효두부 칠리크리스프 참깨",
+      "description": "An experimental Flavor Atlas combination with chinese sesame paste, fermented tofu and chili crisp.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified creamy-crunchy fermentation variation; may be too salty with a large tofu cube.",
+      "tags": [
+        "Spicy",
+        "Nutty",
+        "Creamy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 6,
+        "richness": 9,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-furu-chili-sesame.webp",
+        "alt": "AI-generated visual interpretation of Furu Chili-Crisp Sesame dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sesame paste",
+          "displayName": "Chinese sesame paste",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Fermented tofu",
+          "displayName": "Fermented tofu",
+          "sourceAmount": "1/4 cube"
+        },
+        {
+          "key": "Chili crisp",
+          "displayName": "Chili crisp",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Scallion",
+          "displayName": "Scallion",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-sand-ginger-lime-fresh",
+      "researchId": "original-sand-ginger-lime-fresh",
+      "name": "Sand Ginger Lime Fresh",
+      "nameKo": "샤장 라임 프레시",
+      "description": "An experimental Flavor Atlas combination with minced sand ginger, lime juice and reduced-salt soy sauce.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Unverified light sauce inspired by Hainan ingredients, distinct from the sourced recipes; use culinary sand ginger, not galangal powder by default.",
+      "tags": [
+        "Nutty",
+        "Tangy",
+        "Savory",
+        "Fresh"
+      ],
+      "tasteEstimate": {
+        "heat": 0,
+        "richness": 1,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-sand-ginger-lime-fresh.webp",
+        "alt": "AI-generated visual interpretation of Sand Ginger Lime Fresh dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Sand ginger",
+          "displayName": "Minced sand ginger",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Reduced-salt soy sauce",
+          "sourceAmount": "2 tsp"
+        },
+        {
+          "key": "Sesame oil",
+          "displayName": "Sesame oil",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Cilantro",
+          "displayName": "Cilantro",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Water",
+          "sourceAmount": "1 tsp"
+        }
+      ]
+    },
+    {
+      "id": "original-smoky-peanut-paprika",
+      "researchId": "original-smoky-peanut-paprika",
+      "name": "Smoky Peanut Paprika",
+      "nameKo": "스모키 파프리카 땅콩",
+      "description": "An experimental Flavor Atlas combination with unsweetened peanut paste, smoked paprika and chili oil.",
+      "region": "FLAVOR ATLAS ORIGINAL",
+      "provenance": "Flavor Atlas original · untested",
+      "recipeStatus": "original_untested",
+      "sourceUrl": null,
+      "sourceTitle": null,
+      "sourceNote": "Clearly experimental fusion, not a traditional hot pot dip; emulsify paste with warm water before adding acid.",
+      "tags": [
+        "Nutty",
+        "Creamy",
+        "Tangy",
+        "Savory"
+      ],
+      "tasteEstimate": {
+        "heat": 3,
+        "richness": 8,
+        "status": "editorial_estimate"
+      },
+      "image": {
+        "src": "/images/sauces/original-smoky-peanut-paprika.webp",
+        "alt": "AI-generated visual interpretation of Smoky Peanut Paprika dipping sauce",
+        "kind": "ai_generated_concept"
+      },
+      "ingredients": [
+        {
+          "key": "Peanut sauce",
+          "displayName": "Unsweetened peanut paste",
+          "sourceAmount": "1 tbsp"
+        },
+        {
+          "key": "Smoked paprika",
+          "displayName": "Smoked paprika",
+          "sourceAmount": "1/4 tsp"
+        },
+        {
+          "key": "Chili oil",
+          "displayName": "Chili oil",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Soy sauce",
+          "displayName": "Light soy sauce",
+          "sourceAmount": "1/2 tsp"
+        },
+        {
+          "key": "Lime / citrus",
+          "displayName": "Lime juice",
+          "sourceAmount": "1 tsp"
+        },
+        {
+          "key": "Water",
+          "displayName": "Warm water",
+          "sourceAmount": "2 tsp"
+        }
+      ]
+    }
+  ]
+}
